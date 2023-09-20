@@ -21,13 +21,13 @@ const HERO_SECTION_START = 0.1 / 9;
 const HERO_SECTION_END = 0.6 / 9;
 
 const PAIR_VIEW_START = 0;
-const PAIR_VIEW_END = 1 / 9;
+const PAIR_VIEW_END = 1.6 / 9;
 
 const NONPAIR_VIEW_START = 1 / 9;
 const NONPAIR_VIEW_END = 3.6 / 9;
 
-const HUMAN_SIT_START = 2.5 / 9;
-const HUMAN_SIT_END = 0.5 / 9;
+const HUMAN_SIT_START = 2.6 / 9;
+const HUMAN_SIT_END = 0.4 / 9;
 
 const HUMAN_REST_START = 4.45 / 9;
 const HUMAN_REST_END = 0.55 / 9;
@@ -429,7 +429,7 @@ export default function Experience() {
       >
         <group ref={model1}>
           <Model model={1} visible={model1visibility} />
-          <CreateLineAndLabel
+          {/* <CreateLineAndLabel
             point1={[0, 0.85, 0.55]}
             point2={[0, 1, 0.55]}
             label={'Leather'}
@@ -446,7 +446,7 @@ export default function Experience() {
             point2={[-0.25, 1, -0.43]}
             label={'Metal'}
             dimensionsVisible={dimensionsVisible}
-          />
+          /> */}
           {/* Human */}
           <group ref={human}>
             <Human sit={humanSit} rest={humanRest} />

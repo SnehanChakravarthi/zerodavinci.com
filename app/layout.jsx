@@ -1,12 +1,18 @@
 import '../styles/globals.css';
-import { Inter } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import localFont from 'next/font/local';
 import { siteConfig } from '@/config/site';
 import Footer from '@/components/root/Footer';
+import TurnDevice from '@/components/root/TurnDevice';
 
-// const inter = Inter({ subsets: ['latin'] });
+// const secondFont = Poppins({
+//   subsets: ['latin'],
+//   variable: '--font-secondary',
+//   display: 'swap',
+// });
 
+// Saira; Comfortaa
 const microgramma = localFont({
   src: [
     {
@@ -65,9 +71,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={microgramma.className}>
+      <body className={`${microgramma.className}  `}>
         {children}
-        <Footer />
+        {/* <TurnDevice /> */}
       </body>
     </html>
   );

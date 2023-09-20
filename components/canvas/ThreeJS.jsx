@@ -18,7 +18,7 @@ function CustomProgressBar() {
 
 export default function ThreeJS() {
   return (
-    <div className="fixed -z-10 h-screen w-screen bg-neutral-200">
+    <div className="fixed -z-10 bottom-0 h-screen w-screen bg-mainBG">
       <CustomProgressBar />
       <Canvas
         shadows

@@ -7,7 +7,7 @@ export default function SignUpForm() {
   const { handleSubmit, alertMessage } = useHandleSubmit();
 
   return (
-    <div className="sm:bg-transparent bg-neutral-200">
+    <div className="sm:bg-transparent bg-mainBG">
       <form
         onSubmit={handleSubmit}
         className="grid grid-rows-2 grid-cols-2 sm:grid-rows-2 gap-2 sm:grid-cols-2 "

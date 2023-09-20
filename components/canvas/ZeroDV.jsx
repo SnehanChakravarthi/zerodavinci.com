@@ -33,16 +33,16 @@ const meshesToChangeSet = new Set([
 ]);
 
 const buttonColors = {
-  2: '#3B3B3B', // black
+  2: '#535353', // black
   0: '#A8A9AD', // silver
   1: '#B88A53', // gold
 };
 
 const HERO_SECTION_START = 0.1 / 9;
-const HERO_SECTION_END = 0.6 / 9;
+const HERO_SECTION_END = 0.4 / 9;
 
-const HIDDEN_SECTION_START = 1.2 / 9;
-const HIDDEN_SECTION_END = 0.6 / 9;
+const HIDDEN_SECTION_START = 1.6 / 9;
+const HIDDEN_SECTION_END = 0.2 / 9;
 
 const SEMI_MODE_START = 3 / 9;
 const SEMI_MODE_END = 0.5 / 9;
@@ -52,6 +52,9 @@ const REST_MODE_END = 0.4 / 9;
 
 const CHECKOUT_MODE_START = 6 / 9;
 const CHECKOUT_MODE_END = 0.3 / 9;
+
+const SUBSCRIBE_MODE_START = 7 / 9;
+const SUBSCRIBE_MODE_END = 0.3 / 9;
 
 const MY_CLIP_DURATION = 3.75;
 
@@ -64,7 +67,7 @@ export default function Model({ model, ...props }) {
     new MeshStandardMaterial({
       color: buttonColors[snap.modelColor] || '#A5A5A5',
       metalness: 1,
-      roughness: 0.45,
+      roughness: 0.4,
     })
   );
 
@@ -172,6 +175,10 @@ export default function Model({ model, ...props }) {
       CHECKOUT_MODE_START,
       CHECKOUT_MODE_END
     );
+    const subscribeModeProgress = scrollUtils.range(
+      SUBSCRIBE_MODE_START,
+      SUBSCRIBE_MODE_END
+    );
 
     if (heroSectionProgress > 0) {
       animIndex = [0, 1, 2, 3, 4, 5, 6, 10];
@@ -198,6 +205,10 @@ export default function Model({ model, ...props }) {
     if (checkoutModeProgess > 0) {
       animProgress = checkoutModeProgess;
       animIndex = [0, 1, 10];
+    }
+    if (subscribeModeProgress > 0) {
+      animProgress = subscribeModeProgress;
+      animIndex = [2, 3, 7, 8, 9];
     }
 
     animProgressRef.current = animProgress;

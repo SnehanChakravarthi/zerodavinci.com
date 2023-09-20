@@ -19,11 +19,11 @@ export default function Logo() {
   };
 
   return (
-    <div className="border-neutral-200 border-4 rounded-full">
+    <div className="border-mainBG border-4 rounded-full  transition transform hover:scale-110">
       <div
         onClick={scrollToTop}
         ref={logoRef}
-        className="flex items-center bg-neutral-200 rounded-full h-10 w-10 justify-center cursor-pointer"
+        className="flex items-center bg-mainBG rounded-full h-10 w-10 justify-center cursor-pointer "
       >
         <img
           src="/Logo.svg"

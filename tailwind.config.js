@@ -11,10 +11,11 @@ module.exports = {
         modelBlack: '#3B3B3B',
         modelChrome: '#A8A9AD',
         modelGold: '#cba135',
+        mainBG: '#e5e5e5',
       },
-      // fontFamily: {
-      //   sans: ["microgramma", "sans-serif"],
-      // },
+      fontFamily: {
+        sans: ['var(--font-secondary)'],
+      },
       lineHeight: {
         custom: '3.5rem', // Add this line
       },

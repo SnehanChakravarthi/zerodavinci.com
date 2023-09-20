@@ -11,7 +11,7 @@ function PageProgress() {
   });
 
   return (
-    <div className="flex flex-col sm:space-y-4 space-y-1 items-center">
+    <div className="flex flex-col sm:space-y-4 space-y-1 items-center z-30">
       {[...Array(numDivs)].map((_, i) => {
         const lowerBound = i * segment;
         const upperBound = (i + 1) * segment;
@@ -20,7 +20,7 @@ function PageProgress() {
         const size = isActive
           ? 'sm:w-3 sm:h-4 w-2 h-2'
           : 'sm:w-2 sm:h-2 w-1 h-1';
-        const backgroundColor = isActive ? 'bg-black' : 'bg-black/30';
+        const backgroundColor = isActive ? 'bg-black' : 'bg-black/20';
 
         return (
           <div key={i} className="w-3 h-4 flex items-center justify-center">

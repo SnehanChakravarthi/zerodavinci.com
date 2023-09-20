@@ -19,14 +19,10 @@ export default function HeaderButton() {
   return (
     <button
       onClick={handleClick}
-      className="border-4 border-neutral-200 rounded-full transition-transform duration-100 ease-in-out hover:scale-105 "
+      className="border-4 border-mainBG rounded-full h-12 px-4 py-1  text-xl 
+      flex items-center bg-black text-white transition-transform duration-100  ease-in-out hover:scale-105 hover:text-black hover:bg-red-500"
     >
-      <div
-        className={`h-10 px-4 py-1 border-2 border-black rounded-full text-xl 
-          flex items-center bg-black text-white`}
-      >
-        Reserve
-      </div>
+      Reserve
     </button>
   );
 }

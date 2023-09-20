@@ -34,6 +34,20 @@
   }
 } */
 
+/* Hide the message by default */
+.rotate-device-message {
+  display: none;
+}
+
+@media screen and (max-width: 308px) and (orientation: landscape) {
+  body > *:not(.rotate-device-message) {
+    display: none !important;
+  }
+  .rotate-device-message {
+    display: flex !important;
+  }
+}
+
 .scroll-down {
   position: absolute;
   left: 50%;

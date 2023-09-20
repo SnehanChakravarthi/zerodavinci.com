@@ -1,65 +1,36 @@
 import React from 'react';
-import Container from '../root/Container';
-
-// const ZeroDVSVG = () => (
-//   <div className="h-full w-full overflow-hidden">
-//     <object
-//       id="svgObject"
-//       type="image/svg+xml"
-//       data="/ZeroDVVitruvian.svg"
-//     ></object>
-//   </div>
-// );
 
 function Section2() {
-  // const [player, setPlayer] = useState(null);
-  // const svgObjectRef = useRef(null);
-
-  // useEffect(() => {
-  //   const svgDoc = svgObjectRef.current?.contentDocument;
-  //   const element = svgDoc?.getElementById("eysYz8FNIVZ1");
-
-  //   if (element && element.svgatorPlayer) {
-  //     setPlayer(element.svgatorPlayer);
-  //   }
-  // }, []);
-
-  // const scrollProcess = useScrollProgress();
-  // scrollUtils.updateOffset(scrollProcess);
-
-  // const scrollPosition = scrollUtils.range(1.3 / 10, 1 / 10) * 100;
-  // player?.seek(scrollPosition);
-
   return (
-    <div className="flex bg-neutral-100 h-screen w-full flex-col items-center justify-center border">
-      <div className="flex flex-col items-center justify-center px-4 text-center">
-        <p className="text-4xl sm:text-4xl font-bold">
-          Zero Boundaries, Infinite Possibilities
-        </p>
-        <p className=" text-3xl sm:text-4xl font-medium hidden sm:block">
-          The Future is Yours with Zero da Vinci
+    <div className="overflow-x-clip relative w-screen -mt-40 bg-neutral-50 flex text-sm font-medium text-neutral-600 sm:text-base text-clip  sm:text-center tracking-wide h-screen flex-col items-center justify-center shadow-md shadow-black/30 z-0">
+      <div className="flex flex-col w-full h-auto items-center justify-center px-4 text-center py-6 ">
+        <div className="flex justify-center items-center max-w-xl w-[130vw]">
+          <video
+            className="w-full h-full object-cover transform translate-x-5"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src="/ZeroDV1_webm.webm" type="video/webm" />
+            <source src="/ZeroDV1_hevc.mov" type="video/quicktime" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <hr className="w-[60vw] sm:w-[50vw]  lg:w-[35vw] border-black mb-6 mt-3" />
+      <div className="flex flex-col items-center justify-center md:px-0 px-[7vw]  text-justify max-w-screen-lg ">
+        <p className="indent-10 sm:px-28">
+          A synthesis of grand design and solution-oriented multifunctionality,
+          embodied into one single object. The Zero da Vinci redefines your
+          space by seamlessly blending <span className="font-bold"> work</span>{' '}
+          and
+          <span className="font-bold"> rest.</span> It's not just furniture;
+          it's a lifestyle statement that reflects your innovative and conscious
+          living.
         </p>
       </div>
-      {/* <div className="flex w-full sm:h-full max-w-xl  sm:w-2/3 sm:grow ">
-              <ZeroDVSVG />
-            </div> */}
-      <div className="flex justify-center items-center">
-        <video className="w-full max-w-screen-md" autoPlay loop muted>
-          <source src="/ZeroVideo.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <p className=" max-w-3xl  text-base font-medium mb-28  text-center px-2 hidden sm:block">
-        Get ready to break the mold! Zero da Vinci delivers the ultimate freedom
-        to switch between work and rest in a flash. It's not just furniture—it's
-        a lifestyle revolution wrapped up in a unique, high-end statement piece
-        that defines your innovative and mindful lifestyle.
-      </p>
-      <p className=" max-w-3xl  text-sm font-medium   sm:hidden mb-20  text-justify px-6">
-        Break the mold with Zero da Vinci! Switch between work and rest in an
-        instant, all within a high-end piece that defines your innovative,
-        mindful lifestyle.
-      </p>
     </div>
   );
 }

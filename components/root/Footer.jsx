@@ -46,8 +46,8 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-black z-50">
-      <div className="max-w-7xl mx-auto py-8 px-4 overflow-hidden sm:px-6 lg:px-8">
+    <footer className="">
+      <div className="max-w-7xl mx-auto pt-4  px-4 overflow-hidden sm:px-6 lg:px-8">
         <div className="flex justify-center space-x-6">
           {navigation.social.map((item) => (
             <a
@@ -62,7 +62,10 @@ export default function Footer() {
             </a>
           ))}
         </div>
-        <p className="mt-4 text-center font-medium text-white">
+        {/* <p className="mt-4 text-center text-xs font-medium text-white">
+          Website Design by Snehan Chakravarthi
+        </p> */}
+        <p className="mt-4 mb-8 text-center text-xs font-medium text-white">
           &copy; 2023 Motsats Furniture. All rights reserved.
         </p>
       </div>

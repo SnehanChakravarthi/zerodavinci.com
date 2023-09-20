@@ -16,8 +16,8 @@ function Hero() {
   // };
 
   return (
-    <div className="mt-20 h-[80vh]">
-      <div className="space-y-1  text-center font-Libre">
+    <div className="w-full h-[170vh]">
+      <div className="space-y-1 text-center sticky top-32">
         {/* Intro */}
         {/* <p className="text-xl sm:text-xl font-light">Introducing</p> */}
         {/* ZERO da VINCI */}
@@ -65,9 +65,9 @@ function Hero() {
       </div> */}
 
       {/* Scroll Down Arrow */}
-      <div className="fixed top-[95vh] mb-10 flex w-full flex-col items-center justify-center">
+      {/* <div className="fixed top-[95vh] mb-10 flex w-full flex-col items-center justify-center">
         <div className="scroll-down" />
-      </div>
+      </div> */}
     </div>
   );
 }

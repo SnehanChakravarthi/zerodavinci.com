@@ -22,21 +22,21 @@ export default function ViewAR() {
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
-        <div className="rounded-full pr-3">
+        <div className="rounded-full pr-3 hover:scale-110 transform transition">
           <div className="relative w-16 h-16 border border-black rounded-full flex items-center justify-center bg-black cursor-pointer hover-trigger">
             {/* Tooltip */}
             <div className="hidden absolute bg-black text-xs text-white px-2 py-1 rounded z-10 hover-content">
               AR Mode
             </div>
             <div className="w-14 h-14 relative rounded-full  flex items-center justify-center ">
-              <div className="absolute w-full h-full animate-slowSpin">
+              <div className="absolute w-full h-full animate-slowSpin ">
                 <img
                   src="/ARViewCircularBlack.svg"
                   alt="AR View Circular"
                   className="object-contain h-full w-full"
                 />
               </div>
-              <button className="absolute border border-black flex h-9 w-9 items-center justify-center bg-white rounded-full">
+              <button className="absolute border border-black flex h-9 w-9 items-center justify-center css-selector bg-white rounded-full">
                 <img
                   src="/apple-ar-logo.svg"
                   alt="AR Model Viewer"

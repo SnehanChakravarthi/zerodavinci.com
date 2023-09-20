@@ -3,11 +3,11 @@ import SignUpForm from '../root/signUpFormHome';
 
 function SignUpSection() {
   return (
-    <div className="px-2 sm:w-1/2 sm:px-0  sm:mt-32 mt-10   ">
+    <div className="px-2 sm:w-1/2 lg:mt-20 sm:mt-12 mt-8">
       <p className="text-4xl font-bold sm:mb-4 mb-2 sm:text-6xl">Get Ahead</p>
-      <p className="text-lg font-medium sm:text-xl mb-2 text-green-500">
+      {/* <p className="text-lg font-medium sm:text-xl mb-2 text-green-500">
         Subscribe for:
-      </p>
+      </p> */}
       <p className="text-sm font-normal sm:text-base">
         💰 Access to one-time-only Early Bird Deals.
       </p>
