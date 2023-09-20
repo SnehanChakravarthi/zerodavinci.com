@@ -1,10 +1,10 @@
-import { NextResponse } from "next/server";
+import { NextResponse } from 'next/server';
 
-const mailchimp = require("@mailchimp/mailchimp_marketing");
-const crypto = require("crypto");
+const mailchimp = require('@mailchimp/mailchimp_marketing');
+const crypto = require('crypto');
 
 function md5(string) {
-  return crypto.createHash("md5").update(Buffer.from(string)).digest("hex");
+  return crypto.createHash('md5').update(Buffer.from(string)).digest('hex');
 }
 
 mailchimp.setConfig({
@@ -15,14 +15,14 @@ mailchimp.setConfig({
 export async function POST(request) {
   const formData = await request.json();
   const { name, email } = formData;
-  const names = name.split(" ");
+  const names = name.split(' ');
 
   const firstName = names[0];
-  const lastName = names.length > 1 ? names.slice(1).join(" ") : "";
+  const lastName = names.length > 1 ? names.slice(1).join(' ') : '';
 
-  console.log("Fname:", firstName);
-  console.log("Lname:", lastName);
-  console.log("Email:", email);
+  console.log('Fname:', firstName);
+  console.log('Lname:', lastName);
+  console.log('Email:', email);
 
   try {
     // Add the contact to the list
@@ -30,7 +30,7 @@ export async function POST(request) {
       process.env.MAILCHIMP_LIST_ID,
       {
         email_address: email,
-        status: "subscribed",
+        status: 'subscribed',
         merge_fields: {
           FNAME: firstName,
           LNAME: lastName,
@@ -40,7 +40,7 @@ export async function POST(request) {
 
     console.log(`Successfully added contact with id ${addResponse.id}`);
 
-    // Label the contact with "ReactTesting" tag
+    // Label the contact with "Subscribed from Website" tag
     const subscriberHash = md5(email.toLowerCase());
     const tagResponse = await mailchimp.lists.updateListMemberTags(
       process.env.MAILCHIMP_LIST_ID,
@@ -48,8 +48,8 @@ export async function POST(request) {
       {
         tags: [
           {
-            name: "ReactTesting",
-            status: "active",
+            name: 'Subscribed from website',
+            status: 'active',
           },
         ],
       }
@@ -63,7 +63,7 @@ export async function POST(request) {
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error("Error adding and tagging contact:", error);
+    console.error('Error adding and tagging contact:', error);
     return NextResponse.json({ success: false, error: error.status });
   }
 }

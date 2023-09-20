@@ -12,19 +12,19 @@ function CheckoutSection() {
         Reserve your Zero da Vinci today for
         <span className="font-bold text-black"> $95 </span> and secure the
         discounted price of <span className="font-bold text-black"> $1350</span>{' '}
-        <span class="line-through text-red-500">$2700</span> at launch.
+        <span className="line-through text-red-500">$2700</span> at launch.
       </div>
 
       <ol className="text-sm list-decimal list-inside mb-4 mt-2 md:mt-5 font-bold sm:text-base lg:tracking-wide">
-        <li className="">
+        <li>
           Reserve:
           <span className="font-medium"> Buy the $95 reservation today.</span>
         </li>
-        <li className="">
+        <li>
           Unlock:
           <span className="font-medium"> 50% Super Early Bird Discount.</span>
         </li>
-        <li className="">
+        <li>
           Buy:
           <span className="font-medium"> Complete purchase at launch.</span>
         </li>
