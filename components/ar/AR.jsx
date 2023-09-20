@@ -1,10 +1,10 @@
 // 'use client';
 
-import React from 'react';
+// import React from 'react';
 
-export default function AR() {
-  return <div>AR</div>;
-}
+// export default function AR() {
+//   return <div>AR</div>;
+// }
 
 // import React, { useState, useRef, useEffect } from 'react';
 // import { useSnapshot } from 'valtio';

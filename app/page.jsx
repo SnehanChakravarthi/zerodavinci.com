@@ -14,7 +14,7 @@ export default function Home() {
   const snap = useSnapshot(state);
 
   return (
-    <main style={{ height: '1000vh' }}>
+    <main style={{ height: '900vh' }}>
       {!snap.modelLoaded && <LoadingPage />}
       <ReactLenis root autoraf>
         <Navbar />
