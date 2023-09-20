@@ -17,14 +17,7 @@ export default function SignUpForm() {
           <input
             name="fullName"
             type="text"
-            className="
-                    block
-                    w-full
-                    rounded-md
-                    border-transparent
-                    bg-neutral-300 focus:border-neutral-500 focus:bg-neutral-100
-                    focus:ring-0 
-                  "
+            className="block w-full rounded-md border bg-neutral-300 focus:border-neutral-500 focus:bg-neutral-100 focus:ring-0 "
             placeholder="Full Name"
           />
         </label>
@@ -34,15 +27,11 @@ export default function SignUpForm() {
           <input
             name="email"
             type="email"
-            className="
-                    block
-                    w-full
-                    rounded-md
-                    border-transparent
-                    bg-neutral-300 focus:border-neutral-500 focus:bg-neutral-100
-                    focus:ring-0 
-                    invalid:border-pink-500 invalid:text-pink-600
-                    focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+            autoComplete="email"
+            className="block w-full rounded-md border bg-neutral-300
+            focus:border-neutral-500 focus:bg-neutral-100 focus:ring-0
+                    invalid:border-red-500 invalid:text-red-600
+                    focus:invalid:border-red-500 focus:invalid:ring-red-500
                   "
             placeholder="Email address"
           />

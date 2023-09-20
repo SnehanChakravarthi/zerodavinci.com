@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 
-const mailchimp = require('@mailchimp/mailchimp_marketing');
+import mailchimp from '@mailchimp/mailchimp_marketing';
+
 const crypto = require('crypto');
 
 function md5(string) {
