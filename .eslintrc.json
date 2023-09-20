@@ -1,3 +1,15 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "next/core-web-vitals",
+    "next",
+    "prettier"
+  ],
+  "plugins": ["prettier", "prettier/tailwindcss"],
+  "rules": {
+    "import/prefer-default-export": "off",
+    "no-console": "warn",
+    "no-var": "error"
+  }
 }

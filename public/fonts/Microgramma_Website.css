@@ -1,0 +1,32 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3867246, 2020-12-16T11:57:38-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Microgramma Medium Extended (D) by URW Type Foundry
+ * URL: https://www.myfonts.com/products/d-medium-extended-microgramma-330284
+ * Copyright: Copyright © 2023 Monotype Imaging Inc. All rights reserved.
+ *
+ * Webfont: Microgramma Bold Extended (D) by URW Type Foundry
+ * URL: https://www.myfonts.com/products/d-bold-extended-microgramma-330289
+ * Copyright: Copyright © 2023 Monotype Imaging Inc. All rights reserved.
+ * 
+ * © 2023 MyFonts Inc. */
+
+@font-face {
+  font-family: "MicrogrammaMediumExtended(D)";
+  src:
+    url("fonts/MicrogrammaMediumExtendedD/font.woff2") format("woff2"),
+    url("fonts/MicrogrammaMediumExtendedD/font.woff") format("woff");
+}
+@font-face {
+  font-family: "MicrogrammaBoldExtended(D)";
+  src:
+    url("fonts/MicrogrammaBoldExtendedD/font.woff2") format("woff2"),
+    url("fonts/MicrogrammaBoldExtendedD/font.woff") format("woff");
+}
