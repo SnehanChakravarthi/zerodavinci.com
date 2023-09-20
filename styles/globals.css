@@ -144,6 +144,10 @@ html.lenis {
   animation: ARGradient 13s ease infinite;
 }
 
+.gradient-line {
+  background: linear-gradient(to right, transparent, black, transparent);
+}
+
 @keyframes ARGradient {
   0% {
     background-position: 0% 50%;

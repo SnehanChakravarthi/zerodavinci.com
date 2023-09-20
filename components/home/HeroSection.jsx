@@ -16,8 +16,8 @@ function Hero() {
   // };
 
   return (
-    <div className="w-full h-[170vh]">
-      <div className="space-y-1 text-center sticky top-32">
+    <div className="w-full h-[170vh] flex flex-col items-center justify-start">
+      <div className="space-y-1 text-center sticky top-28">
         {/* Intro */}
         {/* <p className="text-xl sm:text-xl font-light">Introducing</p> */}
         {/* ZERO da VINCI */}
@@ -56,16 +56,19 @@ function Hero() {
         </h1>
         {/* Tag Line */}
         <h2 className="text-md font-medium ">Zero Gravity Workstation</h2>
+        <div className=" w-full flex flex-col items-center pt-4 justify-center">
+          {/* <hr className="w-[60vw] sm:w-[50vw] absolute  lg:w-[35vw] border-black border" /> */}
+          <div class="gradient-line w-full h-0.5 absolute"></div>
+          <ColorPicker />
+          <p className="text-xs mt-20 italic absolute ">
+            Choose Your Shade and Dive in <br />
+            Scroll up and down for more
+          </p>
+        </div>
       </div>
-      {/* <div className="top-[95vh] w-full flex mt-4 flex-col items-center justify-center">
-        <ColorPicker />
-        <p className="text-xs mt-1">
-          Choose Your Shade and Dive In – Scroll for More!
-        </p>
-      </div> */}
 
       {/* Scroll Down Arrow */}
-      {/* <div className="fixed top-[95vh] mb-10 flex w-full flex-col items-center justify-center">
+      {/* <div className="pt-[95vh] -translate-x-1 flex w-full flex-col items-center justify-center">
         <div className="scroll-down" />
       </div> */}
     </div>

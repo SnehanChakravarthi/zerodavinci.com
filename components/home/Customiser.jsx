@@ -14,7 +14,7 @@ function Customiser() {
               <ColorPicker />
             </div>
             <div className="flex flex-col w-full items-center">
-              <p className="absolute -translate-y-6 text-xs">Rotate Model</p>
+              <p className="absolute -translate-y-6 text-xs">Slide to rotate</p>
               <RotationSlider />
             </div>
             <ViewAR />
@@ -23,9 +23,9 @@ function Customiser() {
       </div>
       <div className="md:hidden w-full mb-0 ">
         <div className="flex flex-row items-center justify-center w-full ">
-          <div className="flex flex-row items-center justify-center w-full  max-w-sm">
+          <div className="flex flex-row items-center justify-center w-full  max-w-sm px-2">
             <div className="flex flex-col w-full items-center">
-              <p className="absolute -translate-y-6 text-xs">Rotate Model</p>
+              <p className="absolute -translate-y-6 text-xs">Slide to rotate</p>
               <RotationSlider />
             </div>
             <ViewAR />

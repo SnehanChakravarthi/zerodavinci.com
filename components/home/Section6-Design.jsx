@@ -1,4 +1,5 @@
 import React from 'react';
+import { ColorPicker } from './customiserElements';
 
 function DesignSection() {
   return (
@@ -11,10 +12,14 @@ function DesignSection() {
 
         <p className="text-sm mb-6 sm:max-w-lg max-w-md  font-medium  tracking-wide text-neutral-600 sm:text-start text-justify sm:text-base">
           Blending robust metal, premium leather, and handcrafted wood, Zero da
-          Vinci embodies durability, comfort, and timeless elegance. A union of
-          high-end materials that enhance function and elevate artistry.
+          Vinci embodies durability, comfort, and timeless elegance. Designed
+          for convenience, it also comes in a flat-packed format, making
+          assembly and relocation a breeze.
         </p>
-        {/* <ColorPicker /> */}
+        <div className="md:hidden flex-row items-center justify-start w-full flex ">
+          <ColorPicker />
+          <p className="ml-1 text-xs italic"> &larr; Chose shade</p>
+        </div>
       </div>
     </>
   );

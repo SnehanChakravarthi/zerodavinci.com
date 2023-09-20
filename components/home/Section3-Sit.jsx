@@ -1,4 +1,5 @@
 import React from 'react';
+import { ColorPicker } from './customiserElements';
 
 function SemiSection() {
   return (
@@ -14,6 +15,10 @@ function SemiSection() {
         peak performance — transforming challenges into opportunities. The
         frontier of limitless productivity beckons.
       </p>
+      <div className="md:hidden flex-row items-center justify-start w-full flex ">
+        <ColorPicker />
+        <p className="ml-1 text-xs italic"> &larr; Chose your shade</p>
+      </div>
     </div>
   );
 }

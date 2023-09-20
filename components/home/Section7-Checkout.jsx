@@ -8,25 +8,34 @@ function CheckoutSection() {
       <p className="block text-red-600 font-bold  sm:text-3xl lg:text-4xl text-xl">
         Super Early Bird Deal!
       </p>
-      <div className="text-base font-medium sm:text-base mt-2 md:mt-6  sm:mb-2  tracking-wide text-neutral-600 max-w-md">
+      <div className="text-base font-medium sm:text-base mt-2 md:mt-6  sm:mb-2  tracking-wide text-black max-w-md">
         Reserve your Zero da Vinci today for
         <span className="font-bold text-black"> $95 </span> and secure the
         discounted price of <span className="font-bold text-black"> $1350</span>{' '}
         <span className="line-through text-red-500">$2700</span> at launch.
       </div>
 
-      <ol className="text-sm list-decimal list-inside mb-4 mt-2 md:mt-5 font-bold sm:text-base lg:tracking-wide">
+      <ol className="text-sm list-decimal list-inside mb-4 mt-2 md:mt-5 font-bold sm:text-base lg:tracking-wide ">
         <li>
           Reserve:
-          <span className="font-medium"> Buy the $95 reservation today.</span>
+          <span className="font-medium text-neutral-600">
+            {' '}
+            Buy the $95 reservation today.
+          </span>
         </li>
         <li>
           Unlock:
-          <span className="font-medium"> 50% Super Early Bird Discount.</span>
+          <span className="font-medium text-neutral-600">
+            {' '}
+            50% Super Early Bird Discount.
+          </span>
         </li>
         <li>
           Buy:
-          <span className="font-medium"> Complete purchase at launch.</span>
+          <span className="font-medium text-neutral-600">
+            {' '}
+            Complete purchase at launch.
+          </span>
         </li>
       </ol>
 

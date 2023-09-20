@@ -71,7 +71,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${microgramma.className}  `}>
+      <body className={`${microgramma.className} overflow-x-hidden`}>
         {children}
         {/* <TurnDevice /> */}
       </body>
