@@ -11,7 +11,7 @@ function ContactUs() {
         you!
       </p>
       <p className="font-bold mt-6 text-base mb-2">
-        Motsats Furniture – Innovating Comfort and Design{' '}
+        Motsats Furniture, Innovating Comfort and Design{' '}
       </p>
       <p className="text-sm">
         Based in the heart of Malmö, Sweden, Motsats Furniture is dedicated to
@@ -29,7 +29,7 @@ function ContactUs() {
         </a>
       </p>
       <p className="text-sm font-normal">
-        <span className="font-bold">📞 Phone:</span> +46 760724988{' '}
+        <span className="font-bold">📞 Phone:</span> +46 760724988
       </p>
       <p className="text-sm font-normal">
         <span className="font-bold">📍 Address:</span> Östra Förstadsgatan 50,

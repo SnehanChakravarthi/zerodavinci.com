@@ -24,7 +24,7 @@ const useHandleSubmit = () => {
 
       if (result.success) {
         console.log('Name and Email added to Newsletter');
-        setAlertMessage('Thanks for joining the newsletter!');
+        setAlertMessage('Thanks for joining the Zero Da Vinci newsletter!');
       } else if (result.error) {
         console.log(result.error);
         if (result.error.includes('already a list member')) {

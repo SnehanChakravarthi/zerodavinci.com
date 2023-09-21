@@ -4,7 +4,7 @@ import React from 'react';
 import useHandleSubmit from '../../hooks/useHandleSubmit'; // Import the custom hook
 
 const inputStyles =
-  'block w-full rounded-md border bg-neutral-300 focus:border-neutral-500 focus:bg-neutral-100 focus:ring-0';
+  'block w-full rounded-md border bg-neutral-300 focus:border-black focus:bg-neutral-100 focus:ring-1 focus:ring-black';
 const alertStyles = 'text-red-500 mt-2 font-bold whitespace-nowrap';
 
 export default function SignUpForm() {
@@ -36,7 +36,7 @@ export default function SignUpForm() {
             required
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
             autoComplete="email"
-            className={`${inputStyles} invalid:border-red-500 invalid:text-red-600 focus:invalid:border-red-500 focus:invalid:ring-red-500`}
+            className={`${inputStyles}`}
             placeholder="Email address"
           />
         </label>

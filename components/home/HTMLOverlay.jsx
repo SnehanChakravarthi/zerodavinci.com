@@ -29,8 +29,8 @@ const sections = [
 ];
 
 const RANGES = [
-  { start: 0, end: 1 / 9, copy: 1 },
-  { start: 1 / 9, end: 1 / 9, copy: 2 },
+  // { start: 0, end: 1 / 9, copy: 1 },
+  // { start: 1 / 9, end: 1 / 9, copy: 2 },
   { start: 2 / 9 + 0.02, end: 1 / 9 - 0.01, copy: 3 },
   { start: 3 / 9 + 0.02, end: 1 / 9 - 0.01, copy: 4 },
   { start: 4 / 9 + 0.02, end: 1 / 9 - 0.01, copy: 5 },
@@ -51,7 +51,7 @@ export default function HTMLOverlay() {
     scrollUtils.updateOffset(progress);
 
     const newCustomiser = scrollUtils.visible(1.5 / 9, 9 / 9);
-    const newPageProgress = scrollUtils.visible(2 / 9, 9);
+    const newPageProgress = scrollUtils.visible(0 / 9, 9);
     let newCopy = -1;
 
     for (const range of RANGES) {
@@ -72,7 +72,7 @@ export default function HTMLOverlay() {
   // console.log(scrollY.toFixed(3));
 
   return (
-    <div className="fixed w-screen h-screen z-0">
+    <div className="fixed w-screen bottom-0 h-screen z-0">
       {sections.map(({ component: Section, key }) => (
         <div
           key={key}

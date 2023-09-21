@@ -249,7 +249,7 @@ export default function Experience() {
         zValue = 8;
         yValue = 1.6;
       } else if (width > 320 && width <= 540) {
-        zValue = 8 - ((width - 320) / (540 - 320)) * (8 - 5);
+        zValue = 8 - ((width - 320) / (540 - 320)) * (8 - 6);
         yValue = 1.6 - ((width - 320) / (540 - 320)) * (1.1 - 0.9);
       }
 

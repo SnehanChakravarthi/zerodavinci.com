@@ -7,7 +7,7 @@ import ContactUs from './ContactUs';
 
 function FAQSection() {
   return (
-    <div className="flex relative min-h-screen w-screen flex-col items-center bg-neutral-100 shadow-sm shadow-black tracking-wide">
+    <div className="flex absolute  min-h-screen w-screen flex-col items-center bg-neutral-100 shadow-sm shadow-black tracking-wide">
       <div className="container flex w-11/12 md:flex-row flex-col items-start justify-center grow pb-10">
         <div className="px-2 md:w-1/2 md:pr-10 md:mt-28 mt-16 ">
           <p className="text-2xl  font-bold md:text-3xl mb-4">
