@@ -58,10 +58,7 @@ export const metadata = {
     site: '@MotsatsDesign',
     title: siteConfig.name,
     description: siteConfig.description,
-    image: './opengraph-image.jpg',
-    player: `./ZeroDVTwitterPlayer.mp4`,
-    playerWidth: 1280,
-    playerHeight: 720,
+    image: '/opengraph-image.png',
     creator: '@MotsatsDesign',
   },
   icons: {
@@ -78,6 +75,7 @@ export default function RootLayout({ children }) {
       <body className={`${microgramma.className} overflow-x-hidden`}>
         {children}
         {/* <TurnDevice /> */}
+        <Analytics />
       </body>
     </html>
   );

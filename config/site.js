@@ -3,7 +3,7 @@ export const siteConfig = {
   description:
     "The Zero da Vinci redefines your space by seamlessly blending work and rest. It's not just furniture; it's a lifestyle statement that reflects your innovative and conscious living.",
   url: 'https://zerodavinci.com/',
-  ogImage: './opengraph-image.jpg',
+  ogImage: '/opengraph-image.png',
   links: {
     twitter: 'https://twitter.com/MotsatsDesign',
   },
