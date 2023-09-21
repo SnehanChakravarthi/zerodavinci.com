@@ -62,7 +62,7 @@ function Hero() {
           <ColorPicker />
           <p className="text-xs mt-20 italic absolute ">
             Choose Your Shade and Dive in <br />
-            Scroll up and down for more
+            Scroll up and down for experience
           </p>
         </div>
       </div>

@@ -41,8 +41,8 @@ export const metadata = {
   authors: 'Snehan Chakravarthi',
   creator: [
     {
-      name: 'Snehan Chakravarthi',
-      url: 'https://www.linkedin.com/in/snehanchakravarthi/',
+      name: 'Motsats Furniture',
+      url: siteConfig.url,
     },
   ],
   openGraph: {
@@ -54,10 +54,14 @@ export const metadata = {
     siteName: siteConfig.name,
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'player',
+    site: '@MotsatsDesign',
     title: siteConfig.name,
     description: siteConfig.description,
-    images: [`${siteConfig.url}/og.jpg`],
+    image: './opengraph-image.jpg',
+    player: `./ZeroDVTwitterPlayer.mp4`,
+    playerWidth: 1280,
+    playerHeight: 720,
     creator: '@MotsatsDesign',
   },
   icons: {
