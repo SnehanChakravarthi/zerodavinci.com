@@ -1,7 +1,7 @@
 export const siteConfig = {
-  name: 'Zero da Vinci | Reserve Super Early Bird Discount Now',
+  name: 'Zero da Vinci: Experience Weightlessness in this Futuristic Zero-Gravity Chair',
   description:
-    "The Zero da Vinci redefines your space by seamlessly blending work and rest. It's not just furniture; it's a lifestyle statement that reflects your innovative and conscious living.",
+    'Say hello to Zero da Vinci—a groundbreaking furniture concept that lets you toggle between zero-gravity comfort and productive work settings, all wrapped up in stunning design inspired by both the past and the future.',
   url: 'https://zerodavinci.com/',
   ogImage: '/opengraph-image.png',
   links: {
