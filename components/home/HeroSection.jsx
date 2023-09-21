@@ -58,7 +58,7 @@ function Hero() {
         {/* <h2 className="text-md font-medium ">Zero Gravity Workstation</h2> */}
         <div className=" w-full flex flex-col items-center pt-4 justify-center">
           {/* <hr className="w-[60vw] sm:w-[50vw] absolute  lg:w-[35vw] border-black border" /> */}
-          <div class="gradient-line w-full h-0.5 absolute"></div>
+          <div className="gradient-line w-full h-0.5 absolute"></div>
           <ColorPicker />
           <p className="text-xs mt-20 italic absolute ">
             Choose Your Shade and Dive in <br />
