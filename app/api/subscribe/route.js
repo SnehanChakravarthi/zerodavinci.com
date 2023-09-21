@@ -64,7 +64,16 @@ export async function POST(request) {
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error('Error adding and tagging contact:', error);
-    return NextResponse.json({ success: false, error: error.status });
+    console.error('Error adding and tagging contact:', error.response.res.text);
+
+    // Parse the error detail
+    let errorDetail = 'An error occurred';
+    try {
+      errorDetail = JSON.parse(error.response.res.text).detail;
+    } catch (jsonError) {
+      console.error('Failed to parse error text:', jsonError);
+    }
+
+    return NextResponse.json({ success: false, error: errorDetail });
   }
 }
