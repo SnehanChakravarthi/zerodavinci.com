@@ -72,7 +72,7 @@ export default function HTMLOverlay() {
   // console.log(scrollY.toFixed(3));
 
   return (
-    <div className="fixed w-screen bottom-0 h-screen z-0">
+    <div className="fixed w-screen h-screen z-0">
       {sections.map(({ component: Section, key }) => (
         <div
           key={key}
