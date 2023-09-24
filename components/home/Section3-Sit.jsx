@@ -17,7 +17,7 @@ function SemiSection() {
       </p>
       <div className="md:hidden flex-row items-center justify-start w-full flex ">
         <ColorPicker />
-        <p className="ml-1 text-xs italic"> &larr; Chose your shade</p>
+        {/* <p className="ml-1 text-xs italic"> &larr; Chose your shade</p> */}
       </div>
     </div>
   );

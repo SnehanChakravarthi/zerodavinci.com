@@ -50,11 +50,11 @@ const SEMI_MODE_END = 0.5 / 9;
 const REST_MODE_START = 4 / 9;
 const REST_MODE_END = 0.4 / 9;
 
-const CHECKOUT_MODE_START = 6 / 9;
-const CHECKOUT_MODE_END = 0.3 / 9;
+// const CHECKOUT_MODE_START = 6 / 9;
+// const CHECKOUT_MODE_END = 0.3 / 9;
 
-const SUBSCRIBE_MODE_START = 7 / 9;
-const SUBSCRIBE_MODE_END = 0.3 / 9;
+// const SUBSCRIBE_MODE_START = 7 / 9;
+// const SUBSCRIBE_MODE_END = 0.3 / 9;
 
 const MY_CLIP_DURATION = 3.75;
 
@@ -65,7 +65,7 @@ export default function Model({ model, ...props }) {
   const updatedTargetColor = useRef(new THREE.Color());
   const baseMaterialRef = useRef(
     new MeshStandardMaterial({
-      color: buttonColors[snap.modelColor] || '#A5A5A5',
+      color: snap.modelColor || '#A5A5A5',
       metalness: 1,
       roughness: 0.4,
     })
@@ -140,9 +140,7 @@ export default function Model({ model, ...props }) {
     if (isColorChangingRef.current) {
       console.log('Changing color');
       // Check the ref
-      updatedTargetColor.current.set(
-        buttonColors[snap.modelColor] || '#A5A5A5'
-      );
+      updatedTargetColor.current.set(snap.modelColor || '#A5A5A5');
 
       dampC(
         baseMaterialRef.current.color,
@@ -171,14 +169,14 @@ export default function Model({ model, ...props }) {
     );
     const semiModeProgress = scrollUtils.range(SEMI_MODE_START, SEMI_MODE_END);
     const restModeProgress = scrollUtils.range(REST_MODE_START, REST_MODE_END);
-    const checkoutModeProgess = scrollUtils.range(
-      CHECKOUT_MODE_START,
-      CHECKOUT_MODE_END
-    );
-    const subscribeModeProgress = scrollUtils.range(
-      SUBSCRIBE_MODE_START,
-      SUBSCRIBE_MODE_END
-    );
+    // const checkoutModeProgess = scrollUtils.range(
+    //   CHECKOUT_MODE_START,
+    //   CHECKOUT_MODE_END
+    // );
+    // const subscribeModeProgress = scrollUtils.range(
+    //   SUBSCRIBE_MODE_START,
+    //   SUBSCRIBE_MODE_END
+    // );
 
     if (heroSectionProgress > 0) {
       animIndex = [0, 1, 2, 3, 4, 5, 6, 10];
@@ -202,14 +200,14 @@ export default function Model({ model, ...props }) {
       animProgress = 1 - restModeProgress;
       animIndex = [0, 1, 10];
     }
-    if (checkoutModeProgess > 0) {
-      animProgress = checkoutModeProgess;
-      animIndex = [0, 1, 10];
-    }
-    if (subscribeModeProgress > 0) {
-      animProgress = subscribeModeProgress;
-      animIndex = [2, 3, 7, 8, 9];
-    }
+    // if (checkoutModeProgess > 0) {
+    //   animProgress = checkoutModeProgess;
+    //   animIndex = [0, 1, 10];
+    // }
+    // if (subscribeModeProgress > 0) {
+    //   animProgress = subscribeModeProgress;
+    //   animIndex = [2, 3, 7, 8, 9];
+    // }
 
     animProgressRef.current = animProgress;
     animIndexRef.current = animIndex;

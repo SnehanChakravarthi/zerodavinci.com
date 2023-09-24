@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect, use } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useSnapshot } from 'valtio';
 import * as THREE from 'three';
 import { Object3D } from 'three';
@@ -15,16 +15,9 @@ import Human from './Human';
 import Package from './Package';
 import { scrollUtils, useWindowDimensions } from '@/hooks';
 const hdri = import('@pmndrs/assets/hdri/warehouse.exr');
-import CreateLineAndLabel from './Lines';
-
-const HERO_SECTION_START = 0.1 / 9;
-const HERO_SECTION_END = 0.6 / 9;
 
 const PAIR_VIEW_START = 0;
 const PAIR_VIEW_END = 1.6 / 9;
-
-const NONPAIR_VIEW_START = 1 / 9;
-const NONPAIR_VIEW_END = 3.6 / 9;
 
 const HUMAN_SIT_START = 2.6 / 9;
 const HUMAN_SIT_END = 0.4 / 9;
@@ -60,32 +53,24 @@ export default function Experience() {
   const human = useRef(new Object3D());
   const packageRef = useRef(new Object3D());
 
-  // const [visibilityStates, setVisibilityStates] = useState({
-  //   pairView: false,
-  //   humanSitVisible: false,
-  //   humanRestVisible: false,
-  //   dimensionsVisible: false,
-  //   floatUp: false,
-  //   floatDown: false,
-  // });
+  const [Ustate, setUState] = useState({
+    pairView: true,
+    humanSitVisible: false,
+    humanRestVisible: false,
+    floatUp: 0,
+    floatDown: null,
+  });
 
-  // const {
-  //   pairView,
-  //   humanSitVisible,
-  //   humanRestVisible,
-  //   dimensionsVisible,
-  //   floatUp,
-  //   floatDown,
-  // } = visibilityStates;
+  const { pairView, humanSitVisible, humanRestVisible, floatUp, floatDown } =
+    Ustate;
 
-  const [heroSectionProgress, setHeroSectionProgress] = useState(0);
-  const [nonPairViewProgress, setNonPairViewProgress] = useState(0);
-  const [pairView, setPairView] = useState(true);
-  const [humanSitVisible, setHumanSitVisible] = useState(false);
-  const [humanRestVisible, setHumanRestVisible] = useState(false);
-  const [dimensionsVisible, setDimensionsVisible] = useState(false);
-  const [floatUp, setFloatUp] = useState(0);
-  const [floatDown, setFloatDown] = useState(null);
+  // Function to update multiple state variables at once
+  const setMultipleStates = (newState) => {
+    setUState((prevState) => ({
+      ...prevState,
+      ...newState,
+    }));
+  };
 
   let rotationValue = snap.rotationSlider * Math.PI * 0.2;
   let ry = !pairView ? Math.PI / 2 + rotationValue : Math.PI / 2;
@@ -141,97 +126,17 @@ export default function Experience() {
   useLenis(({ progress }) => {
     scrollUtils.updateOffset(progress);
 
-    const heroSectionProgress = scrollUtils.range(
-      HERO_SECTION_START,
-      HERO_SECTION_END
-    );
-    setHeroSectionProgress(heroSectionProgress);
-    const pairViewRange = scrollUtils.visible(PAIR_VIEW_START, PAIR_VIEW_END);
-    setPairView(pairViewRange);
-    const nonPairViewProgress = scrollUtils.range(
-      NONPAIR_VIEW_START,
-      NONPAIR_VIEW_END
-    );
-    setNonPairViewProgress(nonPairViewProgress);
-    const humanSitRange = scrollUtils.visible(HUMAN_SIT_START, HUMAN_SIT_END);
-    setHumanSitVisible(humanSitRange);
-    const humanRestRange = scrollUtils.visible(
-      HUMAN_REST_START,
-      HUMAN_REST_END
-    );
-    setHumanRestVisible(humanRestRange);
-    const designModeRange = scrollUtils.visible(
-      DESIGN_MODE_START,
-      DESIGN_MODE_END
-    );
-    setDimensionsVisible(designModeRange);
+    const newStates = {
+      pairView: scrollUtils.visible(PAIR_VIEW_START, PAIR_VIEW_END),
+      humanSitVisible: scrollUtils.visible(HUMAN_SIT_START, HUMAN_SIT_END),
+      humanRestVisible: scrollUtils.visible(HUMAN_REST_START, HUMAN_REST_END),
+      floatUp: scrollUtils.range(NEW_FLOAT_UP_START, NEW_FLOAT_UP_END),
+      floatDown: scrollUtils.range(NEW_FLOAT_DOWN_START, NEW_FLOAT_DOWN_END),
+    };
 
-    const newFloatUp = scrollUtils.range(NEW_FLOAT_UP_START, NEW_FLOAT_UP_END);
-    setFloatUp(newFloatUp);
-    const newFloatDown = scrollUtils.range(
-      NEW_FLOAT_DOWN_START,
-      NEW_FLOAT_DOWN_END
-    );
-    setFloatDown(newFloatDown);
+    // Use a single function to update all the relevant states
+    setMultipleStates(newStates);
   });
-
-  // const newValues = {
-  //   pairView: pairViewRange,
-  //   // humanSitVisible: humanSitRange,
-  //   // humanRestVisible: humanRestRange,
-  //   // dimensionsVisible: designModeRange,
-  //   // floatUp: newFloatUp,
-  //   // floatDown: newFloatDown,
-  // };
-
-  // const hasChanged = Object.keys(newValues).some(
-  //   (key) => newValues[key] !== visibilityStates[key]
-  // );
-
-  // if (hasChanged) {
-  //   setVisibilityStates(newValues);
-  // }
-
-  // handleVisibilityChange(prevPairViewRef, pairViewRange, setPairView);
-
-  // const nonPairSectionProgress = scrollUtils.range(1 / 9, 9);
-  // const nonPairSectionRange = scrollUtils.visible(1 / 9, 9);
-  // // const modelHeightchange = scrollUtils.range(5 / 9, 0.2 / 9);
-
-  // // const humanSitRange = scrollUtils.visible(2.5 / 9, 0.5 / 9);
-  // handleVisibilityChange(
-  //   prevHumanSitRangeRef,
-  //   humanSitRange,
-  //   setHumanSitVisible
-  // );
-
-  // // const humanRestRange = scrollUtils.visible(4.35 / 9, 0.5 / 9);
-  // handleVisibilityChange(
-  //   prevHumanRestRangeRef,
-  //   humanRestRange,
-  //   setHumanRestVisible
-  // );
-
-  // // const designModeRange = scrollUtils.visible(5 / 9, 1 / 9);
-  // handleVisibilityChange(
-  //   prevDimensionsRef,
-  //   designModeRange,
-  //   setDimensionsVisible
-  // );
-
-  // // const newFloatUp = scrollUtils.range(4.4 / 9, 0.4 / 9);
-  // handleVisibilityChange(prevFloatUpRef, newFloatUp, setFloatUp);
-
-  // // const newFloatDown = scrollUtils.range(5.2 / 9, 0.4 / 9);
-  // handleVisibilityChange(prevFloatDownRef, newFloatDown, setFloatDown);
-
-  // if (floatDown > 0) {
-  //   // packageRef.current.position.y = THREE.MathUtils.lerp(
-  //   //   -3,
-  //   //   -0.48,
-  //   //   modelHeightchange
-  //   // );
-  // }
 
   useEffect(() => {
     model1.current.rotation.y = ry;
@@ -241,31 +146,39 @@ export default function Experience() {
     plane.current.position.set(0, 0, 0);
 
     const width = windowDimensions.width;
+    const height = windowDimensions.height;
+    console.log('w', width);
+    console.log('h', height);
 
     if (isMobile) {
       let zValue, yValue;
 
       if (width <= 320) {
         zValue = 8;
-        yValue = 1.6;
+        // yValue = 1.6;
       } else if (width > 320 && width <= 540) {
-        zValue = 8 - ((width - 320) / (540 - 320)) * (8 - 6);
-        yValue = 1.6 - ((width - 320) / (540 - 320)) * (1.1 - 0.9);
+        zValue = 8 - ((width - 320) / (540 - 320)) * 2;
+        // yValue = 1.6 - ((width - 320) / (540 - 320)) * (1.1 - 0.9);
       }
 
+      // if (height <= 700) {
+      //   yValue = 1;
+      // }
+
       model1.current.position.x = 0;
+      // model1.current.position.y = -1.5;
       packageRef.current.position.x = 0;
+      // packageRef.current.position.x = -1.5;
 
       camera.position.set(0, 0.8, zValue);
-      camera.lookAt(0, yValue, 0);
+      camera.lookAt(0, 1.5, 0);
       camera.fov = 35;
       camera.updateProjectionMatrix();
     } else if (isTablet) {
-      let zValue, yValue;
+      let zValue;
 
       if (width > 480 && width <= 768) {
         zValue = 9 - ((width - 480) / (768 - 480)) * (8 - 6);
-        yValue = 1.3 - ((width - 480) / (768 - 480)) * (1.1 - 0.9);
       }
 
       if (pairView) {
@@ -288,13 +201,11 @@ export default function Experience() {
         camera.updateProjectionMatrix();
       }
     } else if (isDesktop) {
-      let zValue, yValue;
+      let zValue;
       if (width >= 1280) {
-        zValue = 4.5;
-        yValue = 1.3;
+        zValue = 4;
       } else if (width > 768 && width <= 1280) {
-        zValue = 6 - ((width - 768) / (1280 - 768)) * (6 - 4.5);
-        yValue = 1.3 - ((width - 768) / (1280 - 768)) * (1.1 - 0.9);
+        zValue = 4 - ((width - 768) / (1280 - 768)) * (4.5 - 4);
       }
 
       if (pairView) {
@@ -310,10 +221,9 @@ export default function Experience() {
         setModel2visibility(false);
         model1.current.position.set(0.7, 0, 0);
         packageRef.current.position.set(0.7, -1, 0);
-
-        camera.position.set(0, 0.7, zValue - 0.5);
+        camera.position.set(0, 0.7, zValue - 1);
         camera.lookAt(0, 0.8, 0);
-        camera.fov = 35;
+        camera.fov = 50;
         camera.updateProjectionMatrix();
       }
     }

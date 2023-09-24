@@ -2,9 +2,8 @@ import React from 'react';
 
 function ContactUs() {
   return (
-    <div>
-      {' '}
-      <p className="font-bold text-3xl mb-3">Contact Us</p>
+    <div className="max-w-2xl">
+      <p className="text-2xl font-bold md:text-3xl">Contact Us</p>
       <p className="text-sm">
         We're always here to answer any questions you may have about the Zero da
         Vinci, or any other inquiries you might have. We'd love to hear from
@@ -31,10 +30,10 @@ function ContactUs() {
       <p className="text-sm font-normal">
         <span className="font-bold">📞 Phone:</span> +46 760724988
       </p>
-      <p className="text-sm font-normal">
+      {/* <p className="text-sm font-normal">
         <span className="font-bold">📍 Address:</span> Östra Förstadsgatan 50,
         21212 Malmö, Sweden
-      </p>
+      </p> */}
     </div>
   );
 }

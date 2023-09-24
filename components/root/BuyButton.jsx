@@ -6,7 +6,7 @@ export default function BuyButton() {
       onClick={() =>
         (window.location.href = 'https://buy.stripe.com/3cscQw3wG1scbvy6ox')
       }
-      className={`px-6 py-2 h-full rounded-full cursor-pointer  bg-red-500 text-lg font-bold text-black hover:shadow-lg transition transform hover:scale-110`} // Added 'transition', 'transform' and 'hover:scale-110'
+      className="px-6 py-3 rounded-full cursor-pointer  bg-yellow-500 text-xl font-bold text-black hover:shadow-lg transition transform hover:scale-110"
     >
       RESERVE
     </button>

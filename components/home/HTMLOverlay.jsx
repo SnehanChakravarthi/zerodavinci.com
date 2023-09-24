@@ -23,21 +23,21 @@ const sections = [
   { component: SemiSection, key: 4 },
   { component: RestSection, key: 5 },
   { component: DesignSection, key: 6 },
-  { component: CheckoutSection, key: 7 },
-  { component: SignUpSection, key: 8 },
+  // { component: CheckoutSection, key: 7 },
+  // { component: SignUpSection, key: 8 },
   // { component: Contact, key: 9 },
 ];
 
 const RANGES = [
   // { start: 0, end: 1 / 9, copy: 1 },
   // { start: 1 / 9, end: 1 / 9, copy: 2 },
-  { start: 2 / 9 + 0.02, end: 1 / 9 - 0.01, copy: 3 },
-  { start: 3 / 9 + 0.02, end: 1 / 9 - 0.01, copy: 4 },
-  { start: 4 / 9 + 0.02, end: 1 / 9 - 0.01, copy: 5 },
-  { start: 5 / 9 + 0.02, end: 1 / 9 - 0.01, copy: 6 },
-  { start: 6 / 9 + 0.02, end: 1 / 9 - 0.01, copy: 7 },
-  { start: 7 / 9, end: 2 / 9, copy: 8 },
-  { start: 8 / 9, end: 9, copy: 9 },
+  { start: 1.8 / 9, end: 1.2 / 9 - 0.02, copy: 3 },
+  { start: 3 / 9 + 0.02, end: 1 / 9 - 0.02, copy: 4 },
+  { start: 4 / 9 + 0.02, end: 1 / 9 - 0.02, copy: 5 },
+  { start: 5 / 9 + 0.02, end: 3 / 9 - 0.02, copy: 6 },
+  // { start: 6 / 9 + 0.02, end: 1 / 9 - 0.01, copy: 7 },
+  // { start: 7 / 9, end: 2 / 9, copy: 8 },
+  // { start: 8 / 9, end: 9, copy: 9 },
 ];
 
 export default function HTMLOverlay() {
@@ -83,27 +83,13 @@ export default function HTMLOverlay() {
           }}
           className="absolute w-screen h-screen z-10"
         >
-          <div className="mx-auto h-full container">
-            <div className="flex w-full flex-col items-center">
-              <div className="my-12 h-full w-11/12 ">
-                <Section />
-              </div>
+          <div className="mx-auto h-full container flex w-full flex-col items-center">
+            <div className="my-12 h-full w-11/12 ">
+              <Section />
             </div>
           </div>
         </div>
       ))}
-
-      {/* For SVGSection */}
-      {/* <div
-        key="SVGSection"
-        style={{
-          opacity: state.copy === 2 ? 1 : 0,
-          transition: 'opacity 0.2s ease',
-        }}
-        className="absolute w-screen h-screen"
-      >
-        <SVGSection />
-      </div> */}
 
       {/* For Customiser */}
       <div

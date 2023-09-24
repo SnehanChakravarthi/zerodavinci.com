@@ -1,47 +1,63 @@
 import React from 'react';
 import BuyButton from '../root/BuyButton';
+import Image from 'next/image';
 
 function CheckoutSection() {
   return (
-    <div className="lg:w-auto sm:w-full lg:mt-20 sm:mt-12 mt-8 px-2 sm:px-0">
-      <p className="text-3xl font-bold lg:text-6xl sm:text-5xl">Grab 50% Off</p>
-      <p className="block text-red-600 font-bold  sm:text-3xl lg:text-4xl text-xl">
+    <div className="w-full flex flex-col tracking-wide items-center justify-end h-auto">
+      <p className="text-4xl font-bold lg:text-6xl sm:text-5xl mt-20">
+        Save 50%
+      </p>
+      <p className="block text-yellow-500 font-bold  sm:text-3xl lg:text-4xl text-xl">
         Super Early Bird Deal!
       </p>
-      <div className="text-base font-medium sm:text-base mt-2 md:mt-6  sm:mb-2  tracking-wide text-black max-w-md">
-        Reserve your Zero da Vinci today for
-        <span className="font-bold text-black"> $95 </span> and secure the
-        discounted price of <span className="font-bold text-black"> $1350</span>{' '}
-        <span className="line-through text-red-500">$2700</span> at launch.
+
+      <Image
+        src="/pictures/blackSEB.png"
+        width={500}
+        height={500}
+        className="rounded-xl mt-4 w-full max-w-xl hidden"
+        alt=""
+      />
+
+      <div className="text-sm font-medium sm:text-lg mt-2 md:mt-6  tracking-wide text-black text-center ">
+        Reserve for Just <span className="font-bold text-black">$95</span> Today
+        and Get 50% Off the Retail Price!
       </div>
 
-      <ol className="text-sm list-decimal list-inside mb-4 mt-2 md:mt-5 font-bold sm:text-base lg:tracking-wide ">
+      {/* <p className="font-bold text-sm mt-4">👇 Here's How It Works: 👇</p> */}
+
+      <ol className="text-sm mb-4 font-bold sm:text-base lg:tracking-wide mt-4 max-w-2xl">
         <li>
           Reserve:
           <span className="font-medium text-neutral-600">
             {' '}
-            Buy the $95 reservation today.
+            Get Super Early Bird 50% Discount by reserving today.
           </span>
         </li>
         <li>
-          Unlock:
+          Purchase:
           <span className="font-medium text-neutral-600">
             {' '}
-            50% Super Early Bird Discount.
+            Pay $1350{' '}
+            <span className="line-through decoration-2 decoration-red-500">
+              $2700
+            </span>
+            , in our kickstarter launch this November.
           </span>
         </li>
         <li>
-          Buy:
+          Delivery:
           <span className="font-medium text-neutral-600">
             {' '}
-            Complete purchase at launch.
+            Your Zero da Vinci will be shipped to you in Q1 2024.
           </span>
         </li>
       </ol>
 
       <BuyButton />
       <p className="font-light text-xs pt-1 ">
-        🐥 Limited offer & perks for our early birds.
+        Limited offer & perks for our early birds.
       </p>
     </div>
   );

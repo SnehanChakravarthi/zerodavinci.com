@@ -20,7 +20,7 @@ const modelData = [
     bgClass: 'bg-modelBlack',
   },
   {
-    model: '/ZeroDVGodAR-Chrome-transformed.glb',
+    model: '/ZeroDVChrome.glb',
     color: COLORS.CHROME,
     label: 'Chrome Model',
     bgClass: 'bg-modelChrome', // Or whatever class you'd like to use
@@ -34,7 +34,7 @@ const modelData = [
 ];
 
 const modelMap = {
-  0: '/ZeroDVGodAR-Chrome-transformed.glb',
+  0: '/ZeroDVChrome.glb',
   1: '/ZeroDVGodAR-Gold-transformed.glb',
   2: '/ZeroDVGodAR-Black-transformed.glb',
 };
@@ -70,14 +70,14 @@ export default function ARView() {
   const playForward = () => {
     if (modelViewerRef.current) {
       modelViewerRef.current.timeScale = 1.5;
-      modelViewerRef.current.play({ repetitions: 0 });
+      modelViewerRef.current.play({ repetitions: 1 });
     }
   };
 
   const playBackward = () => {
     if (modelViewerRef.current) {
       modelViewerRef.current.timeScale = -1.5;
-      modelViewerRef.current.play({ repetitions: 0 });
+      modelViewerRef.current.play({ repetitions: 1 });
     }
   };
 
@@ -102,7 +102,7 @@ export default function ARView() {
       >
         <div className="flex flex-col w-full items-center justify-center absolute bottom-12 space-y-1 text-xs font-bold">
           <p className="italic font-medium">1. Chose your Shade</p>
-          <div className="flex flex-row items-center justify-center w-full space-x-2">
+          <div className="flex flex-row items-center justify-center  space-x-2">
             {modelData.map(({ model, color, bgClass }) => (
               <button
                 key={model}
@@ -111,20 +111,20 @@ export default function ARView() {
                   setModel(model);
                   handleClick(color);
                 }}
-                className={`h-8 grow cursor-pointer rounded-md border border-black ${bgClass}  transform active:scale-95`}
+                className={`h-8 w-8 grow cursor-pointer rounded-full border border-black ${bgClass}  transform active:scale-95`}
               ></button>
             ))}
           </div>
           <p className="italic font-medium">2. Chose Mode</p>
           <div className="space-x-2 flex w-full justify-center ">
             <button
-              className="rounded-md bg-red-500 h-8 border grow border-black text-black transform active:scale-95"
+              className="rounded-full bg-red-500 h-8 border grow border-black text-black transform active:scale-95"
               onClick={playForward}
             >
               Zero-G Mode
             </button>
             <button
-              className="rounded-md bg-black  h-8 grow text-white transform active:scale-95 "
+              className="rounded-full bg-black  h-8 grow text-white transform active:scale-95 "
               onClick={playBackward}
             >
               Work Mode
@@ -135,14 +135,14 @@ export default function ARView() {
 
         {arSupported && (
           <button
-            className="bg-green-500 flex items-center justify-center h-11 py-2 rounded-md font-bold border border-black w-full absolute bottom-0 "
+            className="bg-green-500 flex items-center justify-center h-11 py-2 rounded-full font-bold border border-black w-full absolute bottom-0 "
             slot="ar-button"
           >
             Activate AR
           </button>
         )}
         {!arSupported && (
-          <div className="bg-green-500 flex items-center justify-center h-11 py-2 rounded-md font-bold border border-black w-full absolute bottom-0 ">
+          <div className="bg-green-500 flex items-center justify-center h-11 py-2 rounded-full font-bold border border-black w-full absolute bottom-0 ">
             AR not supported!
           </div>
         )}
