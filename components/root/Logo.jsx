@@ -29,6 +29,8 @@ export default function Logo() {
           src="/Logo.svg"
           alt="Zero Da Vinci Logo"
           className="rounded-full"
+          height={100}
+          width={100}
         />
       </div>
     </div>

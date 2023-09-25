@@ -20,7 +20,7 @@ export default function ThreeJS() {
   return (
     <div className="fixed -z-10 bottom-0 h-screen w-screen bg-mainBG">
       <CustomProgressBar />
-      <Canvas shadows frameloop="demand" dpr={[1, 2]}>
+      <Canvas shadows dpr={[1, 2]}>
         <Preload all />
         <Experience />
       </Canvas>

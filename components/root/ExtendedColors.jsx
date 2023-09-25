@@ -20,6 +20,7 @@ function ExtendedColors() {
 
   const handleColorChange = (color) => {
     state.modelColor = color;
+    console.log(state.modelColor);
   };
 
   return (

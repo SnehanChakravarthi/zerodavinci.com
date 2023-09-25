@@ -19,7 +19,12 @@ function ColorPopOver() {
     <Popover.Root>
       <Popover.Trigger asChild>
         <button className="sm:h-7 sm:w-7 h-8 w-8 cursor-pointer relative rounded-full border border-black hover:scale-110  transition-transform duration-200 ease-in-out">
-          <img src="/ColorWheel.png" alt="color-picker" />
+          <img
+            src="/ColorWheel.png"
+            height={100}
+            width={100}
+            alt="color-picker"
+          />
         </button>
       </Popover.Trigger>
       <Popover.Portal>
@@ -30,7 +35,7 @@ function ColorPopOver() {
           {!subscribed && (
             <div className="absolute bg-black/90 z-10 rounded-lg py-2 px-3 flex flex-col">
               <p className="text-white text-xs pb-2 tracking-wide ">
-                Sign Up to our Newsletter to unlock 10 additional colors
+                Sign Up to our Newsletter for Early Bird Discounts!
               </p>
               <SignUpForm />
               {/* <p className="font-light text-white text-xs pt-1">
@@ -39,8 +44,9 @@ function ColorPopOver() {
                 </p> */}
             </div>
           )}
-          <div className="px-8 py-10 bg-black rounded-lg ">
-            <ExtendedColors />
+          <div className="px-8 py-10 bg-black text-white rounded-lg ">
+            Thank you for signing up to our newsletter
+            {/* <ExtendedColors /> */}
           </div>
           {/* <Popover.Close asChild>
             <svg
