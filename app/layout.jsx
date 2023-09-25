@@ -2,6 +2,7 @@ import '../styles/globals.css';
 import { Analytics } from '@vercel/analytics/react';
 import localFont from 'next/font/local';
 import { siteConfig } from '@/config/site';
+import Script from 'next/script';
 
 // const secondFont = Poppins({
 //   subsets: ['latin'],
@@ -68,6 +69,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-EHWNF6P10R"
+        />
+        <Script>
+          {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EHWNF6P10R');
+      `}
+        </Script>
+      </head>
       <body className={`${microgramma.className} overflow-x-hidden`}>
         {children}
         <Analytics />

@@ -33,7 +33,7 @@ function ColorPopOver() {
           sideOffset={6}
         >
           {!subscribed && (
-            <div className="absolute bg-black/90 z-10 rounded-lg py-2 px-3 flex flex-col">
+            <div className="absolute bg-black/90 z-10 rounded-lg py-3 px-3 flex flex-col">
               <p className="text-white text-xs pb-2 tracking-wide ">
                 Sign Up to our Newsletter for Early Bird Discounts!
               </p>
