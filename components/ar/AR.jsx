@@ -3,7 +3,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useSnapshot } from 'valtio';
 import state from '../../store';
-import Script from 'next/script';
 import '@google/model-viewer';
 
 const COLORS = {
@@ -101,7 +100,7 @@ export default function ARView() {
       >
         <div className="flex flex-col w-full items-center justify-center absolute bottom-12 space-y-1 text-xs font-bold">
           <p className="italic font-medium">1. Chose your Shade</p>
-          <div className="flex flex-row items-center justify-center  space-x-2">
+          <div className="flex flex-row items-center justify-center space-x-2">
             {modelData.map(({ model, color, bgClass }) => (
               <button
                 key={model}
@@ -110,7 +109,7 @@ export default function ARView() {
                   setModel(model);
                   handleClick(color);
                 }}
-                className={`h-8 w-8 grow cursor-pointer rounded-full border border-black ${bgClass}  transform active:scale-95`}
+                className={`h-8 w-8 grow cursor-pointer rounded-full border border-black ${bgClass} transform active:scale-95`}
               ></button>
             ))}
           </div>
@@ -118,13 +117,13 @@ export default function ARView() {
           <div className="space-x-2 flex w-full justify-center ">
             <button
               className="rounded-full bg-red-500 h-8 border grow border-black text-black transform active:scale-95"
-              onClick={playForward}
+              onClick={playBackward}
             >
               Zero-G Mode
             </button>
             <button
-              className="rounded-full bg-black  h-8 grow text-white transform active:scale-95 "
-              onClick={playBackward}
+              className="rounded-full bg-black h-8 grow text-white transform active:scale-95 "
+              onClick={playForward}
             >
               Work Mode
             </button>
