@@ -1,10 +1,7 @@
 import '../styles/globals.css';
-import { Poppins } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import localFont from 'next/font/local';
 import { siteConfig } from '@/config/site';
-import Footer from '@/components/root/Footer';
-import TurnDevice from '@/components/root/TurnDevice';
 
 // const secondFont = Poppins({
 //   subsets: ['latin'],
@@ -54,11 +51,10 @@ export const metadata = {
     siteName: siteConfig.name,
   },
   twitter: {
-    card: 'player',
     site: '@MotsatsDesign',
     title: siteConfig.name,
     description: siteConfig.description,
-    image: '/opengraph-image.png',
+    image: '/og.png',
     creator: '@MotsatsDesign',
   },
   icons: {

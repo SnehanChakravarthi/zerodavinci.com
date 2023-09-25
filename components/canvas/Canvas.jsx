@@ -285,7 +285,7 @@ export default function Experience() {
       {/* <Leva /> */}
       <Environment files={suspend(hdri).default} />
 
-      {/* {!isMobile && (
+      {!isMobile && (
         <SoftShadows
           frustum={frustum}
           size={size}
@@ -293,7 +293,7 @@ export default function Experience() {
           samples={samples}
           rings={rings}
         />
-      )} */}
+      )}
 
       {!isMobile && (
         <directionalLight
@@ -302,7 +302,7 @@ export default function Experience() {
           shadow-radius={0}
           castShadow
           // shadow-bias={0.001}
-          shadow-mapSize={[512, 512]}
+          shadow-mapSize={[1024, 1024]}
           shadow-camera-near={1}
           shadow-camera-far={10}
           shadow-camera-top={5}

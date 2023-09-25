@@ -2,48 +2,13 @@
 
 import React from 'react';
 import { ColorPicker } from './customiserElements';
-import { useWindowDimensions } from '@/hooks';
 
 function Hero() {
-  // const { windowDimensions } = useWindowDimensions();
-
-  // const baseFontSize = windowDimensions.width / 30; // Set the base font size as you like
-
-  // const styles = {
-  //   fontSize1: `${baseFontSize * 5.5}px`,
-  //   fontSize2: `${baseFontSize * 4}px`,
-  //   fontSize3: `${baseFontSize * 6.7}px`,
-  // };
-
   return (
     <div className="w-full h-[170vh] flex flex-col items-center justify-start">
       <div className="space-y-1 text-center sticky top-28">
         {/* Intro */}
-        {/* <p className="text-xl sm:text-xl font-light">Introducing</p> */}
-        {/* ZERO da VINCI */}
-        {/* {windowDimensions.width < 480 ? (
-          <div>
-            <span
-              style={{ fontSize: styles.fontSize1 }}
-              className="leading-8 sm:leading-custom"
-            >
-              ZERO
-            </span>
-            <span
-              style={{ fontSize: styles.fontSize2 }}
-              className="pl-1 sm:pl-4"
-            >
-              da
-            </span>
-            <br />
-            <span
-              style={{ fontSize: styles.fontSize3 }}
-              className="inline-block -mt-3 font-bold leading-custom sm:leading-custom"
-            >
-              VINCI
-            </span>
-          </div>
-        ) : ( */}
+
         <h1 className="shrink">
           <span className="text-6xl leading-8 sm:text-7xl sm:leading-custom ">
             ZERO

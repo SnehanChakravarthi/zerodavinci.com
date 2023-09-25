@@ -1,17 +1,11 @@
 import React, { useState } from 'react';
 import { useLenis } from '@studio-freight/react-lenis';
-import Container from '../root/Container';
 import {
-  Hero,
   SitSection,
   SemiSection,
   RestSection,
   DesignSection,
-  SVGSection,
   Customiser,
-  CheckoutSection,
-  SignUpSection,
-  FAQSection,
 } from '@/components/home';
 import PageProgress from '../root/PageProgress';
 import { scrollUtils } from '@/hooks/scrollUtils';

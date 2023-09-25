@@ -40,27 +40,27 @@ const modelMap = {
 
 export default function ARView() {
   const modelViewerRef = useRef(null);
-  const [arSupported, setArSupported] = useState(false);
+  // const [arSupported, setArSupported] = useState(false);
   const snap = useSnapshot(state);
   const buttonValue = snap.modelColor;
 
-  useEffect(() => {
-    if (modelViewerRef.current) {
-      setArSupported(modelViewerRef.current.canActivateAR);
-      console.log('AR Supported: ', modelViewerRef.current.canActivateAR);
-    }
-  }, [modelViewerRef.current]);
+  // useEffect(() => {
+  //   if (modelViewerRef.current) {
+  //     setArSupported(modelViewerRef.current.canActivateAR);
+  //     console.log('AR Supported: ', modelViewerRef.current.canActivateAR);
+  //   }
+  // }, [modelViewerRef.current]);
 
-  const initialModel = () => {
-    return modelMap[buttonValue] || '/ZeroDVChrome-transformed.glb';
-  };
+  // const initialModel = () => {
+  //   return modelMap[buttonValue] || '/ZeroDVChrome-transformed.glb';
+  // };
 
-  const [currentModel, setCurrentModel] = useState(initialModel);
+  const [currentModel, setCurrentModel] = useState(modelMap[0]);
 
-  const handleClick = (value) => {
-    state.modelColor = value;
-    console.log(value);
-  };
+  // const handleClick = (value) => {
+  //   state.modelColor = value;
+  //   console.log(value);
+  // };
 
   const setModel = (model) => {
     setCurrentModel(model);
@@ -96,7 +96,7 @@ export default function ARView() {
         camera-target="0 0 0.1m"
         max-camera-orbit="auto auto 6m"
         ar-modes="scene-viewer quick-look webxr"
-        quick-look-browsers="safari chrome"
+        // quick-look-browsers="safari chrome"
       >
         <div className="flex flex-col w-full items-center justify-center absolute bottom-12 space-y-1 text-xs font-bold">
           <p className="italic font-medium">1. Chose your Shade</p>
@@ -107,7 +107,7 @@ export default function ARView() {
                 aria-label={color}
                 onClick={() => {
                   setModel(model);
-                  handleClick(color);
+                  // handleClick(color);
                 }}
                 className={`h-8 w-8 grow cursor-pointer rounded-full border border-black ${bgClass} transform active:scale-95`}
               ></button>
@@ -131,19 +131,12 @@ export default function ARView() {
           <p className="italic font-medium">3. Click Activate AR</p>
         </div>
 
-        {arSupported && (
-          <button
-            className="bg-green-500 flex items-center justify-center h-11 py-2 rounded-full font-bold border border-black w-full absolute bottom-0 "
-            slot="ar-button"
-          >
-            Activate AR
-          </button>
-        )}
-        {!arSupported && (
-          <div className="bg-green-500 flex items-center justify-center h-11 py-2 rounded-full font-bold border border-black w-full absolute bottom-0 ">
-            AR not supported!
-          </div>
-        )}
+        <button
+          className="bg-green-500 flex items-center justify-center h-11 py-2 rounded-full font-bold border border-black w-full absolute bottom-0 "
+          slot="ar-button"
+        >
+          Activate AR
+        </button>
       </model-viewer>
     </div>
   );
