@@ -9,7 +9,6 @@ import state from '@/store';
 import LoadingPage from '@/components/home/LoadingPage';
 import Navbar from '@/components/root/Navbar';
 import { Hero, Section2, SectionEnd } from '@/components/home';
-import { useEffect, useState } from 'react';
 
 export default function Home() {
   const snap = useSnapshot(state);
