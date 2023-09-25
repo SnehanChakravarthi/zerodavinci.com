@@ -74,7 +74,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${microgramma.className} overflow-x-hidden`}>
         {children}
-        {/* <TurnDevice /> */}
         <Analytics />
       </body>
     </html>

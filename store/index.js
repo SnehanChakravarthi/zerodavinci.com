@@ -1,12 +1,13 @@
 // "use client";
 
-import { proxy } from "valtio";
+import { proxy } from 'valtio';
 
 const state = proxy({
-  modelColor: 0,
+  modelColor: '#A8A9AD',
   loadProgress: 0,
   rotationSlider: 0,
   modelLoaded: false,
+  subscribed: false,
 });
 
 export default state;

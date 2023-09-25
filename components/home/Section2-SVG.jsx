@@ -2,7 +2,7 @@ import React from 'react';
 
 function Section2() {
   return (
-    <div className="overflow-x-clip relative w-screen -mt-52 bg-neutral-50 flex text-sm font-medium text-black sm:text-base text-clip  sm:text-center tracking-wide h-screen flex-col items-center justify-center shadow-md shadow-black/30 z-0">
+    <div className="overflow-x-clip absolute w-screen -mt-52 bg-neutral-50 flex text-sm font-medium text-black sm:text-base text-clip  sm:text-center tracking-wide h-screen flex-col items-center justify-center shadow-md shadow-black/30 z-0">
       <div className="flex flex-col w-full h-auto items-center justify-center px-4 text-center py-6 ">
         <div className="flex justify-center items-center max-w-xl w-[130vw]">
           <video

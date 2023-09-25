@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useGLTF } from '@react-three/drei';
 import { useSnapshot } from 'valtio';
 import state from '../../store';
@@ -6,13 +6,15 @@ import state from '../../store';
 export default function Package(props) {
   const { nodes, materials } = useGLTF('/Package-transformed.glb');
   const snap = useSnapshot(state);
-  const buttonValue = snap.modelColor;
 
   const packageColor = {
-    2: materials.PackageBlack,
-    0: materials.PackageChrome,
-    1: materials.PackageGold,
+    '#535353': materials.PackageBlack,
+    '#A8A9AD': materials.PackageChrome,
+    '#B88A53': materials.PackageGold,
   };
+
+  const selectedMaterial =
+    packageColor[snap.modelColor] || materials.PackageChrome;
 
   return (
     <group {...props} dispose={null}>
@@ -20,7 +22,7 @@ export default function Package(props) {
         castShadow
         receiveShadow
         geometry={nodes.PackageBox.geometry}
-        material={packageColor[buttonValue]}
+        material={selectedMaterial}
         position={[0, 0, 0]}
         scale={[1, 1, 1.15]}
       />

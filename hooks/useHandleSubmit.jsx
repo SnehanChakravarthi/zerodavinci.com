@@ -1,9 +1,12 @@
 'use client';
 
+import state from '@/store';
 import { useState } from 'react';
-
+import { useSnapshot } from 'valtio';
 const useHandleSubmit = () => {
   const [alertMessage, setAlertMessage] = useState(null);
+
+  const snap = useSnapshot(state);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,10 +28,12 @@ const useHandleSubmit = () => {
       if (result.success) {
         console.log('Name and Email added to Newsletter');
         setAlertMessage('Thanks for joining the Zero Da Vinci newsletter!');
+        state.subscribed = true;
       } else if (result.error) {
         console.log(result.error);
         if (result.error.includes('already a list member')) {
           setAlertMessage('You are already subscribed!');
+          state.subscribed = true;
         } else if (result.error.includes('provide a valid email address')) {
           setAlertMessage('Please provide a valid email address');
         } else {

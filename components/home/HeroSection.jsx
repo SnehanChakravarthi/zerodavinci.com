@@ -62,15 +62,10 @@ function Hero() {
           <ColorPicker />
           <p className="text-xs mt-20 italic absolute ">
             Choose Your Shade and Dive in <br />
-            Scroll up and down for experience
+            Scroll to Explore
           </p>
         </div>
       </div>
-
-      {/* Scroll Down Arrow */}
-      {/* <div className="pt-[95vh] -translate-x-1 flex w-full flex-col items-center justify-center">
-        <div className="scroll-down" />
-      </div> */}
     </div>
   );
 }

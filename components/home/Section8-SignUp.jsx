@@ -3,11 +3,9 @@ import SignUpForm from '../root/signUpFormHome';
 
 function SignUpSection() {
   return (
-    <div className="px-2 sm:w-1/2 lg:mt-20 sm:mt-12 mt-8 tracking-wide">
-      <p className="text-4xl font-bold sm:mb-4 mb-2 sm:text-6xl">Get Ahead</p>
-      {/* <p className="text-lg font-medium sm:text-xl mb-2 text-green-500">
-        Subscribe for:
-      </p> */}
+    <div className="tracking-wide w-full max-w-2xl">
+      <p className="text-2xl font-bold md:text-3xl mb-4">Join the Revolution</p>
+
       <p className="text-sm font-normal sm:text-base text-neutral-600">
         💰 Access to one-time-only Early Bird Deals.
       </p>
@@ -24,6 +22,10 @@ function SignUpSection() {
         pinnacle.
       </p>
       <SignUpForm />
+      <p className="font-light text-xs pt-1">
+        We respect your privacy. Your email address will never be shared or
+        sold.
+      </p>
     </div>
   );
 }
