@@ -69,24 +69,23 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-EHWNF6P10R"
-        />
-        <Script>
-          {`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-EHWNF6P10R');
-      `}
-        </Script>
-      </head>
       <body className={`${microgramma.className} overflow-x-hidden`}>
         {children}
         <Analytics />
       </body>
+      <Script
+        id="gtag-external-script"
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-EHWNF6P10R"
+      />
+      <Script id="gtag-inline-script">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-EHWNF6P10R');
+          `}
+      </Script>
     </html>
   );
 }
