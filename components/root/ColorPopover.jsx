@@ -19,7 +19,12 @@ function ColorPopOver() {
     <Popover.Root>
       <Popover.Trigger asChild>
         <button className="sm:h-7 sm:w-7 h-8 w-8 cursor-pointer relative rounded-full border border-black hover:scale-110  transition-transform duration-200 ease-in-out">
-          <img src="/ColorWheel.png" alt="color-picker" />
+          <img
+            src="/ColorWheel.png"
+            height={100}
+            width={100}
+            alt="color-picker"
+          />
         </button>
       </Popover.Trigger>
       <Popover.Portal>
