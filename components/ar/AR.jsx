@@ -14,19 +14,19 @@ const COLORS = {
 
 const modelData = [
   {
-    model: '/ZeroDVGodAR-Black-transformed.glb',
+    model: '/ZeroDVBlack-transformed.glb',
     color: COLORS.BLACK,
     label: 'Black Model',
     bgClass: 'bg-modelBlack',
   },
   {
-    model: '/ZeroDVChrome.glb',
+    model: '/ZeroDVChrome-transformed.glb',
     color: COLORS.CHROME,
     label: 'Chrome Model',
     bgClass: 'bg-modelChrome', // Or whatever class you'd like to use
   },
   {
-    model: '/ZeroDVGodAR-Gold-transformed.glb',
+    model: '/ZeroDVGold-transformed.glb',
     color: COLORS.GOLD,
     label: 'Gold Model',
     bgClass: 'bg-modelGold', // Or whatever class you'd like to use
@@ -34,9 +34,9 @@ const modelData = [
 ];
 
 const modelMap = {
-  0: '/ZeroDVChrome.glb',
-  1: '/ZeroDVGodAR-Gold-transformed.glb',
-  2: '/ZeroDVGodAR-Black-transformed.glb',
+  0: '/ZeroDVChrome-transformed.glb',
+  1: '/ZeroDVGold-transformed.glb',
+  2: '/ZeroDVBlack-transformed.glb',
 };
 
 export default function ARView() {
@@ -53,7 +53,7 @@ export default function ARView() {
   }, [modelViewerRef.current]);
 
   const initialModel = () => {
-    return modelMap[buttonValue] || '/ZeroDVGodAR-Black-transformed.glb';
+    return modelMap[buttonValue] || '/ZeroDVChrome-transformed.glb';
   };
 
   const [currentModel, setCurrentModel] = useState(initialModel);
@@ -98,7 +98,6 @@ export default function ARView() {
         max-camera-orbit="auto auto 6m"
         ar-modes="scene-viewer quick-look webxr"
         quick-look-browsers="safari chrome"
-        xr-environment
       >
         <div className="flex flex-col w-full items-center justify-center absolute bottom-12 space-y-1 text-xs font-bold">
           <p className="italic font-medium">1. Chose your Shade</p>

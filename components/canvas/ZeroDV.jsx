@@ -32,12 +32,6 @@ const meshesToChangeSet = new Set([
   'LegRestMesh_1',
 ]);
 
-const buttonColors = {
-  2: '#535353', // black
-  0: '#A8A9AD', // silver
-  1: '#B88A53', // gold
-};
-
 const HERO_SECTION_START = 0.1 / 9;
 const HERO_SECTION_END = 0.4 / 9;
 

@@ -147,38 +147,28 @@ export default function Experience() {
 
     const width = windowDimensions.width;
     const height = windowDimensions.height;
-    console.log('w', width);
-    console.log('h', height);
 
     if (isMobile) {
-      let zValue, yValue;
+      let zValue;
 
       if (width <= 320) {
-        zValue = 8;
-        // yValue = 1.6;
+        zValue = 7;
       } else if (width > 320 && width <= 540) {
-        zValue = 8 - ((width - 320) / (540 - 320)) * 2;
-        // yValue = 1.6 - ((width - 320) / (540 - 320)) * (1.1 - 0.9);
+        zValue = 7 - ((width - 320) / (540 - 320)) * 1.5;
       }
 
-      // if (height <= 700) {
-      //   yValue = 1;
-      // }
-
       model1.current.position.x = 0;
-      // model1.current.position.y = -1.5;
       packageRef.current.position.x = 0;
-      // packageRef.current.position.x = -1.5;
 
       camera.position.set(0, 0.8, zValue);
-      camera.lookAt(0, 1.5, 0);
+      camera.lookAt(0, 1.4, 0);
       camera.fov = 35;
       camera.updateProjectionMatrix();
     } else if (isTablet) {
       let zValue;
 
-      if (width > 480 && width <= 768) {
-        zValue = 9 - ((width - 480) / (768 - 480)) * (8 - 6);
+      if (width > 540 && width <= 768) {
+        zValue = 9 - ((width - 540) / (768 - 540)) * 3;
       }
 
       if (pairView) {
@@ -192,23 +182,22 @@ export default function Experience() {
         camera.updateProjectionMatrix();
       } else if (!pairView) {
         setModel2visibility(false);
-        model1.current.position.set(0.6, 0, 0);
-        packageRef.current.position.set(0.6, 0, 0);
+        model1.current.position.set(0.4, 0, 0);
+        packageRef.current.position.set(0.4, 0, 0);
 
-        camera.position.set(0, 0.7, zValue - 1);
-        camera.lookAt(0, 1, 0);
+        camera.position.set(0, 0.7, zValue - 1.5);
+        camera.lookAt(0, 1.1, 0);
         camera.fov = 35;
         camera.updateProjectionMatrix();
       }
     } else if (isDesktop) {
-      let zValue;
-      if (width >= 1280) {
-        zValue = 4;
-      } else if (width > 768 && width <= 1280) {
-        zValue = 4 - ((width - 768) / (1280 - 768)) * (4.5 - 4);
-      }
-
       if (pairView) {
+        let zValue;
+        if (width > 1280) {
+          zValue = 4;
+        } else if (width > 768 && width <= 1280) {
+          zValue = 6 - ((width - 768) / (1280 - 768)) * 2;
+        }
         setModel2visibility(true);
         model2.current.position.set(0.8, 0, 0);
         model1.current.position.set(-0.8, 0, 0);
@@ -218,9 +207,16 @@ export default function Experience() {
         camera.fov = 35;
         camera.updateProjectionMatrix();
       } else if (!pairView) {
+        let zValue;
+        if (width > 1280) {
+          zValue = 4;
+        } else if (width > 768 && width <= 1280) {
+          zValue = 5 - ((width - 768) / (1280 - 768)) * 1;
+        }
+
         setModel2visibility(false);
         model1.current.position.set(0.7, 0, 0);
-        packageRef.current.position.set(0.7, -1, 0);
+        packageRef.current.position.set(0.7, 0, 0);
         camera.position.set(0, 0.7, zValue - 1);
         camera.lookAt(0, 0.8, 0);
         camera.fov = 50;

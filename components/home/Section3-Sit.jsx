@@ -3,7 +3,7 @@ import { ColorPicker } from './customiserElements';
 
 function SemiSection() {
   return (
-    <div className="sm:w-2/3 lg:mt-20 sm:mt-12 mt-10 px-2 sm:px-0 ">
+    <div className="md:w-2/3 lg:mt-20 sm:mt-12 mt-10 px-2 sm:px-0 ">
       <div className="flex-col mb-2 text-4xl font-bold lg:text-6xl sm:text-5xl">
         <span className="block -mb-2">Work</span>
         <span className="block -mb-2">Beyond</span>
