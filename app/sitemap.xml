@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://zerodavinci.com/sitemap.xml</loc>
+    <lastmod>2023-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.zerodavinci.com/sitemap.xml</loc>
+    <lastmod>2023-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+  </sitemap>
+  <sitemap>
+    <loc>https://motsats.com/sitemap.xml</loc>
+    <lastmod>2023-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+  </sitemap>
+</sitemapindex>
