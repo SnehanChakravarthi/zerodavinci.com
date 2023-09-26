@@ -25,11 +25,42 @@ export const metadata = {
   title: siteConfig.name,
   description: siteConfig.description,
   keywords: [
+    // Existing Keywords
     'Zero da Vinci',
+    'Motsats',
+    'Motsats Furniture',
     'Zero Gravity',
     'Workstation',
     'Designer Furniture',
     'Multifunctional Furniture',
+
+    // Core Keywords
+    'Zero Gravity Chair',
+    'Lounge Chair',
+    'Designer Furniture',
+    'Innovative Furniture Design',
+
+    // Product/Category-Specific Keywords
+    'Scandinavian Furniture',
+    'Gravity Chair',
+    'Luxury Furniture',
+    'Transforming Chair Design',
+    'Anti Gravity Chair',
+    'Multifunctional Furniture',
+
+    // Style & Aesthetics
+    'Modernist Furniture',
+    'Minimalist Living Room',
+    'Mid Century Modernism',
+    'Modern Living Room',
+    'Furniture Styles',
+    'Modern Living Room Design',
+
+    // Additional/Supplementary Keywords
+    'Chaise Lounges',
+    'Chaise Chair',
+    'Officeworks Chairs',
+    'Innovative Furniture',
   ],
   authors: 'Snehan Chakravarthi',
   creator: [
