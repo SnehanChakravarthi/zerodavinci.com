@@ -80,24 +80,24 @@ export default function RootLayout({ children }) {
           href="/favicon-16x16.png"
         />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffffff" />
-      </Head>
-      <body className={`${microgramma.className} overflow-x-hidden`}>
-        {children}
-        <Analytics />
-      </body>
-      <Script
-        id="gtag-external-script"
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-EHWNF6P10R"
-      />
-      <Script id="gtag-inline-script">
-        {`
+        <Script
+          id="gtag-external-script"
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-EHWNF6P10R"
+        />
+        <Script id="gtag-inline-script">
+          {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-EHWNF6P10R');
           `}
-      </Script>
+        </Script>
+      </Head>
+      <body className={`${microgramma.className} overflow-x-hidden`}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
