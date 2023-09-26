@@ -3,6 +3,7 @@ import { Analytics } from '@vercel/analytics/react';
 import localFont from 'next/font/local';
 import { siteConfig } from '@/config/site';
 import Script from 'next/script';
+import Head from 'next/head';
 
 // const secondFont = Poppins({
 //   subsets: ['latin'],
