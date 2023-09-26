@@ -21,6 +21,20 @@ const microgramma = localFont({
   ],
 });
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Zero da Vinci',
+  image: '/pictures/og2.png',
+  description:
+    'An innovative furniture concept that lets you toggle between zero-gravity comfort and productive work settings, all wrapped up in stunning design inspired by both the past and the future.',
+  offers: {
+    '@type': 'Offer',
+    priceCurrency: 'USD',
+    price: '95.00',
+  },
+};
+
 export const metadata = {
   title: siteConfig.name,
   description: siteConfig.description,
@@ -111,6 +125,10 @@ export default function RootLayout({ children }) {
           href="/favicon-16x16.png"
         />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffffff" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </Head>
       <body className={`${microgramma.className} overflow-x-hidden`}>
         {children}
@@ -121,6 +139,7 @@ export default function RootLayout({ children }) {
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-EHWNF6P10R"
       />
+
       <Script id="gtag-inline-script">
         {`
             window.dataLayer = window.dataLayer || [];
