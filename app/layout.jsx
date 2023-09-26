@@ -5,12 +5,6 @@ import { siteConfig } from '@/config/site';
 import Script from 'next/script';
 import Head from 'next/head';
 
-// const secondFont = Poppins({
-//   subsets: ['latin'],
-//   variable: '--font-secondary',
-//   display: 'swap',
-// });
-
 // Saira; Comfortaa
 const microgramma = localFont({
   src: [
@@ -59,17 +53,34 @@ export const metadata = {
     image: '/og.png',
     creator: '@MotsatsDesign',
   },
-  icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
-  },
-  manifest: `${siteConfig.url}/site.webmanifest`,
+
+  manifest: '/site.webmanifest',
+  themeColor: 'white',
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+      </Head>
       <body className={`${microgramma.className} overflow-x-hidden`}>
         {children}
         <Analytics />
