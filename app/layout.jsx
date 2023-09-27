@@ -125,10 +125,6 @@ export default function RootLayout({ children }) {
           href="/favicon-16x16.png"
         />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffffff" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
       </Head>
       <body className={`${microgramma.className} overflow-x-hidden`}>
         {children}
@@ -148,6 +144,10 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-EHWNF6P10R');
           `}
       </Script>
+      <Script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </html>
   );
 }
