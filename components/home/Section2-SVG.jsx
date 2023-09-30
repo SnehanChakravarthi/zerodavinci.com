@@ -12,7 +12,7 @@ function Section2() {
             muted
             playsInline
           >
-            <source src="/ZeroDV1_webm.webm" type='video/mp4; codecs="hvc1"' />
+            <source src="/ZeroDV1_webm.webm" type="video/mp4" />
             <source src="/ZeroDV1_hevc.mov" type="video/quicktime" />
             Your browser does not support the video tag.
           </video>
