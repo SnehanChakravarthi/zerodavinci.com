@@ -44,7 +44,7 @@ export default function HTMLOverlay() {
   useLenis(({ progress }) => {
     scrollUtils.updateOffset(progress);
 
-    const newCustomiser = scrollUtils.visible(1.5 / 9, 9 / 9);
+    const newCustomiser = scrollUtils.visible(1.5 / 9, 7 / 9);
     const newPageProgress = scrollUtils.visible(0 / 9, 9);
     let newCopy = -1;
 

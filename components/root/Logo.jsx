@@ -11,17 +11,17 @@ export default function Logo() {
     }
   });
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth', // Optional, adds smooth scrolling
-    });
-  };
+  // const scrollToTop = () => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: 'smooth', // Optional, adds smooth scrolling
+  //   });
+  // };
 
   return (
     <div className="border-mainBG border-4 rounded-full  transition transform hover:scale-110">
       <div
-        onClick={scrollToTop}
+        // onClick={scrollToTop}
         ref={logoRef}
         className="flex items-center bg-mainBG rounded-full h-10 w-10 justify-center cursor-pointer "
       >
