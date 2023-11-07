@@ -4,6 +4,8 @@ import localFont from 'next/font/local';
 import { siteConfig } from '@/config/site';
 import Script from 'next/script';
 import Head from 'next/head';
+import Navbar from '@/components/root/Navbar';
+import Footer from '@/components/root/Footer';
 
 // Saira; Comfortaa
 const microgramma = localFont({
@@ -47,34 +49,6 @@ export const metadata = {
     'Workstation',
     'Designer Furniture',
     'Multifunctional Furniture',
-
-    // Core Keywords
-    'Zero Gravity Chair',
-    'Lounge Chair',
-    'Designer Furniture',
-    'Innovative Furniture Design',
-
-    // Product/Category-Specific Keywords
-    'Scandinavian Furniture',
-    'Gravity Chair',
-    'Luxury Furniture',
-    'Transforming Chair Design',
-    'Anti Gravity Chair',
-    'Multifunctional Furniture',
-
-    // Style & Aesthetics
-    'Modernist Furniture',
-    'Minimalist Living Room',
-    'Mid Century Modernism',
-    'Modern Living Room',
-    'Furniture Styles',
-    'Modern Living Room Design',
-
-    // Additional/Supplementary Keywords
-    'Chaise Lounges',
-    'Chaise Chair',
-    'Officeworks Chairs',
-    'Innovative Furniture',
   ],
   authors: 'Snehan Chakravarthi',
   creator: [
@@ -127,8 +101,11 @@ export default function RootLayout({ children }) {
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffffff" />
       </Head>
       <body className={`${microgramma.className} overflow-x-hidden`}>
+        <Navbar />
         {children}
-        <Analytics />
+        {/* <Analytics /> */}
+
+        <Footer />
       </body>
       <Script
         id="gtag-external-script"

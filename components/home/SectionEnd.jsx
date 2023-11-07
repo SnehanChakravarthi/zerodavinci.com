@@ -24,11 +24,11 @@ function SectionEnd() {
 
             <SignUpSection />
             <FAQSection />
-            <ContactUs />
+            {/* <ContactUs /> */}
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
