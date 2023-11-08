@@ -66,11 +66,11 @@ export const metadata = {
     siteName: siteConfig.name,
   },
   twitter: {
-    site: '@MotsatsDesign',
+    site: '@zerodavinci_',
     title: siteConfig.name,
     description: siteConfig.description,
     image: '/og.png',
-    creator: '@MotsatsDesign',
+    creator: '@zerodavinci_',
   },
 
   manifest: '/site.webmanifest',
