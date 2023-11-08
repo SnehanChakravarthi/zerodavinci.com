@@ -19,26 +19,26 @@ const getPostContent = (slug) => {
   return matterResult;
 };
 
-// export const generateStaticParams = async () => {
-//   const posts = getPostMetadata();
-//   return posts.map((post) => ({
-//     slug: post.slug,
-//   }));
-// };
+export const generateStaticParams = async () => {
+  const posts = getPostMetadata();
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+};
 
 const PostPage = (props) => {
   const slug = props.params.slug;
   const post = getPostContent(slug);
-  // const metaData = {
-  //   title: post.data.title,
-  //   description: post.data.subtitle, // assuming you have a description field in your markdown
-  //   imageUrl: post.data.imageUrl,
-  //   alt: post.data.alt,
-  // };
+  const metaData = {
+    title: post.data.title,
+    description: post.data.subtitle, // assuming you have a description field in your markdown
+    imageUrl: post.data.imageUrl,
+    alt: post.data.alt,
+  };
 
   return (
     <>
-      {/* <Head>
+      <Head>
         <title>{metaData.title}</title>
         <meta name="description" content={metaData.subtitle} />
         <meta property="og:title" content={metaData.title} />
@@ -49,7 +49,7 @@ const PostPage = (props) => {
         <meta name="twitter:title" content={metaData.title} />
         <meta name="twitter:description" content={metaData.subtitle} />
         <meta name="twitter:image" content={metaData.imageUrl} />
-      </Head> */}
+      </Head>
       <div className="w-full flex lg:flex-row flex-col gap-8">
         <div className="flex flex-col items-start w-full border bg-white border-black rounded-3xl">
           <h1 className="text-4xl text-black px-5 py-4 font-bold w-full">
