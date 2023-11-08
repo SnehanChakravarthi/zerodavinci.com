@@ -1,6 +1,6 @@
 import Link from 'next/link';
-
 import Image from 'next/image';
+
 const PostFeatured = (props) => {
   return (
     <Link href={`blog/posts/${props.slug}`}>
