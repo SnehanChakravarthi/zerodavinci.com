@@ -17,6 +17,7 @@ const getPostMetadata = () => {
       category: matterResult.data.category,
       imageUrl: matterResult.data.imageUrl,
       author: matterResult.data.author,
+      alt: matterResult.data.alt,
       authorImageUrl: matterResult.data.authorImageUrl,
       readingTime: matterResult.data.readingTime,
       featured: matterResult.data.featured,
