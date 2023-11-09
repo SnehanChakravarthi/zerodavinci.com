@@ -19,7 +19,7 @@ const PostFeatured = (props) => {
           <div className="flex-1">
             <p className="text-xl font-semibold text-gray-900">{props.title}</p>
             <p className="mt-2 text-base  tracking-wid text-gray-500">
-              {props.subtitle}
+              {props.description}
             </p>
           </div>
           {/* Author */}

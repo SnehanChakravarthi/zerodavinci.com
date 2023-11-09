@@ -1,6 +1,6 @@
 ---
-title: "A Tale of Two Innovations: Leonardo's Map and the Zero da Vinci"
-subtitle: "Explore the captivating journey of creativity and innovation as we delve into the worlds of two remarkable creations – Leonardo da Vinci's 1502 Map of Imola and the Zero da Vinci. This blog unravels the stories behind these two innovations, centuries apart yet linked by a shared spirit of ingenuity."
+title: 'A Tale of Two Innovations: Leonardo Map and the Zero da Vinci'
+description: "Explore the captivating journey of creativity and innovation as we delve into the worlds of two remarkable creations – Leonardo da Vinci's 1502 Map of Imola and the Zero da Vinci. This blog unravels the stories behind these two innovations, centuries apart yet linked by a shared spirit of ingenuity."
 date: '2023-10-02'
 category: 'Article'
 imageUrl: '/pictures/blog/1/LeonardoDavinci.jpg'

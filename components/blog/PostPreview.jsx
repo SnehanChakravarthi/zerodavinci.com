@@ -15,7 +15,7 @@ const PostPreview = (props) => {
           <div className="flex-1">
             <p className="text-sm font-medium text-indigo-600"></p>
             <p className="text-xl font-semibold text-gray-900">{props.title}</p>
-            <p className="mt-3 text-base text-gray-500">{props.subtitle}</p>
+            <p className="mt-3 text-base text-gray-500">{props.description}</p>
           </div>
           <div className="flex items-center">
             <div className="flex-shrink-0">
