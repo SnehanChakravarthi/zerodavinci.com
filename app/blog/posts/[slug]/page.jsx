@@ -4,7 +4,6 @@ import matter from 'gray-matter';
 import getPostMetadata from '@/components/blog/getPostMetadata';
 import Image from 'next/image';
 import { Quicksand } from 'next/font/google';
-import Head from 'next/head';
 
 export async function generateMetadata({ params }, parent) {
   // Extract the slug or id from the route params
@@ -19,7 +18,7 @@ export async function generateMetadata({ params }, parent) {
   // Use frontmatter to populate metadata
   return {
     title: frontmatter.title,
-    subtitle: frontmatter.subtitle,
+    description: frontmatter.description,
     openGraph: {
       images: [frontmatter.imageUrl],
     },
@@ -49,27 +48,27 @@ export const generateStaticParams = async () => {
 const PostPage = (props) => {
   const slug = props.params.slug;
   const post = getPostContent(slug);
-  const metaData = {
-    title: post.data.title,
-    description: post.data.subtitle, // assuming you have a description field in your markdown
-    imageUrl: post.data.imageUrl,
-    alt: post.data.alt,
-  };
+  // const metaData = {
+  //   title: post.data.title,
+  //   description: post.data.description, // assuming you have a description field in your markdown
+  //   imageUrl: post.data.imageUrl,
+  //   alt: post.data.alt,
+  // };
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>{metaData.title}</title>
-        <meta name="description" content={metaData.subtitle} />
+        <meta name="description" content={metaData.description} />
         <meta property="og:title" content={metaData.title} />
         <meta property="og:description" content={metaData.alt} />
         <meta property="og:image" content={metaData.imageUrl} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@nzerodavinci_" />
         <meta name="twitter:title" content={metaData.title} />
-        <meta name="twitter:description" content={metaData.subtitle} />
+        <meta name="twitter:description" content={metaData.description} />
         <meta name="twitter:image" content={metaData.imageUrl} />
-      </Head>
+      </Head> */}
       <div className="w-full flex lg:flex-row flex-col gap-8">
         <div className="flex flex-col items-start w-full border bg-white border-black rounded-3xl">
           <h1 className="text-4xl text-black px-5 py-4 font-bold w-full">

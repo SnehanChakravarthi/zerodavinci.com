@@ -13,7 +13,7 @@ const getPostMetadata = () => {
     return {
       title: matterResult.data.title,
       date: matterResult.data.date,
-      subtitle: matterResult.data.subtitle,
+      description: matterResult.data.description,
       category: matterResult.data.category,
       imageUrl: matterResult.data.imageUrl,
       author: matterResult.data.author,
@@ -56,7 +56,7 @@ export default getPostMetadata;
 //       id,
 //       title: frontmatter.title,
 //       date: frontmatter.date,
-//       subtitle: frontmatter.subtitle,
+//       description: frontmatter.description,
 //       category: frontmatter.category,
 //       imageUrl: frontmatter.imageUrl,
 //       alt: frontmatter.alt,
