@@ -7,7 +7,7 @@ imageUrl: '/pictures/blog/2/zerogravit+ar.png'
 alt: 'Zero da Vinci + AR'
 author: 'Snehan Chakravarthi'
 authorImageUrl: '/pictures/Snehan.png'
-readingTime: '4 min'
+readingTime: '3 min'
 featured: true
 tags: ['AR', 'Design', 'VR']
 ---
