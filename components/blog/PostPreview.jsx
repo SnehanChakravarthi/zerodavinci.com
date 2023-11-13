@@ -3,24 +3,25 @@ import Link from 'next/link';
 const PostPreview = (props) => {
   return (
     <Link href={`blog/posts/${props.slug}`}>
-      <div className="flex flex-row overflow-hidden bg-white border border-black rounded-2xl">
-        <div className="flex-shrink-0">
+      <div className="flex flex-row h-auto overflow-hidden bg-white border border-black rounded-2xl">
+        <div className="w-2/5">
           <img
-            className="h-40 w-60  object-cover"
+            className="object-cover w-auto h-full"
             src={props.imageUrl}
-            alt=""
+            alt={props.alt}
           />
         </div>
-        <div className="ml-2 flex flex-1 flex-col justify-between">
-          <div className="flex-1">
-            <p className="text-sm font-medium text-indigo-600"></p>
-            <p className="text-xl font-semibold text-gray-900">{props.title}</p>
+        <div className="flex flex-col justify-between flex-1 ml-2">
+          <div className="flex-1 p-2">
+            <p className="text-xl font-semibold leading-5 text-gray-900">
+              {props.title}
+            </p>
             <p className="mt-3 text-base text-gray-500">{props.description}</p>
           </div>
-          <div className="flex items-center">
+          {/* <div className="flex items-center">
             <div className="flex-shrink-0">
               <span className="sr-only">{props.author}</span>
-              <img className="h-6 w-6" src={props.authorImageUrl} alt="" />
+              <img className="w-6 h-6" src={props.authorImageUrl} alt="" />
             </div>
             <div className="ml-3">
               <p className="text-sm font-medium text-gray-900">
@@ -32,7 +33,7 @@ const PostPreview = (props) => {
                 <span>{props.readingTime} read</span>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </Link>

@@ -21,6 +21,8 @@ export async function generateMetadata({ params }, parent) {
   const { data: frontmatter } = postContent;
   const fullUrl = constructFullUrl(slug);
 
+  console.log(fullUrl);
+
   // Use frontmatter to populate metadata
   return {
     title: frontmatter.title,

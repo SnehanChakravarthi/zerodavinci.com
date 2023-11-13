@@ -22,12 +22,12 @@ function page() {
     <PostPreview key={post.slug} {...post} />
   ));
   return (
-    <div className="w-full h-screen mt-10">
+    <div className="w-full h-auto mt-10">
       {/* <p className="mb-2 text-2xl font-bold">Featured</p> */}
       {/* Featured posts */}
       {featuredPostPreviews}
       <div className="lg:flex">
-        <div className="lg:w-2/3 w-full ">
+        <div className="w-full lg:w-2/3 ">
           <div className="lg:mr-8 ">
             {/* <p className="mb-2 text-2xl font-bold">More Stories</p> */}
             <div className="grid w-full grid-cols-1 gap-5">
@@ -37,8 +37,8 @@ function page() {
             </div>
           </div>
         </div>
-        <div className="lg:w-1/3 w-full">
-          <div className="border border-black w-full rounded-2xl bg-neutral-100 px-4 py-4 sticky top-24 ">
+        <div className="w-full lg:w-1/3">
+          <div className="sticky w-full px-4 py-4 border border-black rounded-2xl bg-neutral-100 top-24 ">
             <p className="mb-2 text-2xl font-bold ">Sign up</p>
             <SignUpForm />
           </div>
