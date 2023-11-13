@@ -22,7 +22,7 @@ function page() {
     <PostPreview key={post.slug} {...post} />
   ));
   return (
-    <div className="w-full h-auto mt-10">
+    <div className="w-full mt-10">
       {/* <p className="mb-2 text-2xl font-bold">Featured</p> */}
       {/* Featured posts */}
       {featuredPostPreviews}

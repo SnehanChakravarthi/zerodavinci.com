@@ -2,9 +2,9 @@ import React from 'react';
 
 function blogLayout({ children }) {
   return (
-    <div className="bg-mainBG w-full h-auto">
-      <div className="mx-auto h-full container flex w-full flex-col items-center">
-        <div className="my-12 h-full w-11/12">{children}</div>
+    <div className="w-full h-auto bg-mainBG">
+      <div className="container flex flex-col items-center w-full h-full mx-auto">
+        <div className="w-11/12 h-full my-12">{children}</div>
       </div>
     </div>
   );
