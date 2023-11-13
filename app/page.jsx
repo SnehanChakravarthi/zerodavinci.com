@@ -55,7 +55,7 @@ export default function Home() {
         <HtmlElements />
         <Hero />
         <Section2 />
-        <div className="w-screen flex items-end" style={{ height: '830vh' }}>
+        <div className="flex items-end w-screen" style={{ height: '830vh' }}>
           <SectionEnd />
         </div>
       </ReactLenis>

@@ -3,8 +3,8 @@ import Link from 'next/link';
 const PostPreview = (props) => {
   return (
     <Link href={`blog/posts/${props.slug}`}>
-      <div className="flex flex-row h-auto overflow-hidden bg-white border border-black rounded-2xl">
-        <div className="w-2/5">
+      <div className="flex flex-col h-auto overflow-hidden bg-white border border-black sm:flex-row rounded-2xl">
+        <div className="sm:w-2/5">
           <img
             className="object-cover w-auto h-full"
             src={props.imageUrl}
