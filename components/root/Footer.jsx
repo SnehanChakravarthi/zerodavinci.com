@@ -46,8 +46,8 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-black w-screen z-50">
-      <div className="max-w-7xl mx-auto pt-6  px-4 overflow-hidden sm:px-6 lg:px-8">
+    <footer className="z-50 w-screen bg-black ">
+      <div className="px-4 pt-6 mx-auto overflow-hidden max-w-7xl sm:px-6 lg:px-8">
         <div className="flex justify-center space-x-6">
           {navigation.social.map((item) => (
             <a
@@ -58,16 +58,16 @@ export default function Footer() {
               className="text-white cursor-pointer" // Added cursor-pointer here
             >
               <span className="sr-only">{item.name}</span>
-              <item.icon className="h-6 w-6" aria-hidden="true" />
+              <item.icon className="w-6 h-6" aria-hidden="true" />
             </a>
           ))}
         </div>
-        <p className="mt-4 text-center text-xs font-medium text-white">
+        <p className="mt-4 text-xs font-medium text-center text-white">
           Website Developed by{' '}
-          <span className="flex justify-center items-center">
+          <span className="flex items-center justify-center">
             <a
               href="mailto:snehan@motsats.com"
-              className="text-blue-500 mx-1"
+              className="mx-1 text-blue-500"
               aria-label="Email Snehan Chakravarthi"
             >
               Snehan Chakravarthi
@@ -77,7 +77,7 @@ export default function Footer() {
               href="https://www.linkedin.com/in/snehanchakravarthi/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 mx-1"
+              className="mx-1 text-blue-500"
               aria-label="LinkedIn Profile of Snehan Chakravarthi"
             >
               LinkedIn
@@ -85,7 +85,7 @@ export default function Footer() {
           </span>
         </p>
 
-        <p className="mt-1 mb-6 text-center text-xs font-medium text-white">
+        <p className="mt-1 mb-6 text-xs font-medium text-center text-white">
           &copy; 2023 Motsats Furniture. All rights reserved.
         </p>
       </div>
@@ -95,7 +95,7 @@ export default function Footer() {
 
 {
   /* <nav
-          className="-mx-5 -my-2 flex flex-wrap justify-center"
+          className="flex flex-wrap justify-center -mx-5 -my-2"
           aria-label="Footer"
         >
           {navigation.main.map((item) => (

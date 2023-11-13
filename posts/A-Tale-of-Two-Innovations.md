@@ -1,6 +1,6 @@
 ---
-title: 'A Tale of Two Innovations: Leonardo Map and the Zero da Vinci'
-description: "Explore the captivating journey of creativity and innovation as we delve into the worlds of two remarkable creations – Leonardo da Vinci's 1502 Map of Imola and the Zero da Vinci. This blog unravels the stories behind these two innovations, centuries apart yet linked by a shared spirit of ingenuity."
+title: "A Tale of Two Innovations: Leonardo's Map and the Zero da Vinci"
+description: "Explore the captivating journey of creativity and innovation as we delve into the worlds of two remarkable creations – Leonardo da Vinci's 1502 Map of Imola and the Zero da Vinci."
 date: '2023-10-02'
 category: 'Article'
 imageUrl: '/pictures/blog/1/LeonardoDavinci.jpg'
@@ -8,16 +8,13 @@ alt: 'Leonardo da Vinci and the Zero da Vinci'
 author: 'Snehan Chakravarthi'
 authorImageUrl: '/pictures/Snehan.png'
 readingTime: '4 min'
-featured: true
+featured: false
 tags: ['Story', 'Design', 'History']
 ---
 
 ### The Ingenuity of Leonardo: Mapping Imola
 
 In the early Sixteenth Century, a tide of ambition swept through the Romagna region of northern Italy under the aegis of <a href="https://www.newworldencyclopedia.org/entry/Cesare_Borgia" target="_blank">**Cesare Borgia**</a>. Acting in his father, Pope Alexander VI's name, Borgia was on a relentless quest, capturing city after city to craft his own dominion. By his side, was the era's epitome of genius, **Leonardo da Vinci**, employed as a military architect and engineer to fortify Borgia's conquests.
-
-<!-- ![Leonardo da Vinci presenting Cesare Borgia with designs for fortifications](/pictures/blog/1/4.jpg)
-<sup>_Leonardo da Vinci presenting Cesare Borgia with designs for fortifications_</sup> -->
 
 Among the jewels of Borgia's conquests was the city of <a href="https://en.wikipedia.org/wiki/Imola" target="_blank"> **Imola**</a>, a capture that paved the way to lay siege on Bologna, the region's heart. Here, Leonardo was tasked with a mission pivotal to Borgia's military strategies: **mapping Imola**, a venture aimed at bolstering the city's defenses. However, the endeavor was not without its trials. Leonardo's first attempt was a canvas of frustration; the map lacked accuracy, the buildings appeared obscured—a far cry from the precision Leonardo yearned for.
 
