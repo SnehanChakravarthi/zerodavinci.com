@@ -21,7 +21,7 @@ export async function generateMetadata({ params }, parent) {
   const { data: frontmatter } = postContent;
   const fullUrl = constructFullUrl(slug);
 
-  console.log(fullUrl);
+  console.log(frontmatter);
 
   // Use frontmatter to populate metadata
   return {
@@ -35,13 +35,13 @@ export async function generateMetadata({ params }, parent) {
       title: frontmatter.title,
       description: frontmatter.description,
       siteName: frontmatter.title,
-      images: [frontmatter.imageUrl],
+      image: frontmatter.imageUrl,
     },
     twitter: {
       site: '@zerodavinci_',
       title: frontmatter.title,
       description: frontmatter.description,
-      image: [frontmatter.imageUrl],
+      image: frontmatter.imageUrl,
       creator: '@zerodavinci_',
     },
   };
@@ -73,9 +73,9 @@ const PostPage = (props) => {
 
   return (
     <>
-      <div className="w-full flex lg:flex-row flex-col gap-8">
-        <div className="flex flex-col items-start w-full border bg-white border-black rounded-3xl">
-          <h1 className="text-4xl text-black px-5 py-4 font-bold w-full">
+      <div className="flex flex-col w-full gap-8 lg:flex-row">
+        <div className="flex flex-col items-start w-full bg-white border border-black rounded-3xl">
+          <h1 className="w-full px-5 py-4 text-4xl font-bold text-black">
             {post.data.title}
           </h1>
           <Image
@@ -85,16 +85,16 @@ const PostPage = (props) => {
             width={500}
             height={500}
           />
-          <div className="lg:flex flex-row">
+          <div className="flex-row lg:flex">
             <div className="w-full">
               <div className="px-6">
                 <div className="mb-10 text-center">
                   {/* <h1 className="text-2xl text-black">{post.data.title}</h1> */}
-                  {/* <p className="text-slate-400 mt-2">{post.data.date}</p> */}
+                  {/* <p className="mt-2 text-slate-400">{post.data.date}</p> */}
                 </div>
                 <article
                   // className={`${quicksand.className} prose prose-lg text-justify w-full`}
-                  className="prose prose-md tracking-wide text-justify w-full"
+                  className="w-full tracking-wide prose text-justify prose-md"
                 >
                   <Markdown>{post.content}</Markdown>
                 </article>
