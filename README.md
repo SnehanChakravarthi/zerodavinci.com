@@ -1,4 +1,4 @@
-# Zero da Vinci website.
+# Zero da Vinci website
 
 ## Built using Three.js, r3f, blender, Nextjs
 
@@ -12,4 +12,7 @@
 
 ### AR Feature on mobile
 https://github.com/SnehanChakravarthi/zerodavinci.com/assets/92316997/73941e2c-509e-445b-9ee7-5004bce08ffd
+
+### Threejs animation on scroll
+https://github.com/SnehanChakravarthi/zerodavinci.com/assets/92316997/980eeff3-3021-4727-b96c-d7ebf3380540
 
