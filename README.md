@@ -10,3 +10,6 @@
 ### Product picture
 <img width="400" alt="Zero da Vinci- zero gravity mode + AR headset" src="https://github.com/SnehanChakravarthi/zerodavinci.com/assets/92316997/4df7a1aa-2227-46e6-ab88-0537bab866f6">
 
+### AR Feature on mobile
+https://github.com/SnehanChakravarthi/zerodavinci.com/assets/92316997/73941e2c-509e-445b-9ee7-5004bce08ffd
+
