@@ -14,5 +14,5 @@
 https://github.com/SnehanChakravarthi/zerodavinci.com/assets/92316997/73941e2c-509e-445b-9ee7-5004bce08ffd
 
 ### Threejs animation on scroll
-https://github.com/SnehanChakravarthi/zerodavinci.com/assets/92316997/980eeff3-3021-4727-b96c-d7ebf3380540
+https://github.com/SnehanChakravarthi/zerodavinci.com/assets/92316997/a29b9bc2-a9df-4b15-a647-4f19deaecd8f
 
