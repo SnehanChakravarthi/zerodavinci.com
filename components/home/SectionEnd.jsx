@@ -11,7 +11,7 @@ function SectionEnd() {
     <div className="flex z-0 w-screen flex-col items-center bg-neutral-100 shadow-sm shadow-black tracking-wide h-auto">
       <div className="w-full mx-auto container flex justify-center">
         <div className="w-11/12 flex flex-col px-2 sm:px-0">
-          <div className="space-y-10 flex flex-col items-center justify-center ">
+          <div className="space-y-10 mb-20 flex flex-col items-center justify-center ">
             <CheckoutSection />
 
             <Image
