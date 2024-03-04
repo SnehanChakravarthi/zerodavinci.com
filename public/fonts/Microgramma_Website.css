@@ -19,14 +19,14 @@
  * © 2023 MyFonts Inc. */
 
 @font-face {
-  font-family: "MicrogrammaMediumExtended(D)";
+  font-family: 'MicrogrammaMediumExtended(D)';
   src:
-    url("fonts/MicrogrammaMediumExtendedD/font.woff2") format("woff2"),
-    url("fonts/MicrogrammaMediumExtendedD/font.woff") format("woff");
+    url('fonts/MicrogrammaMediumExtendedD/font.woff2') format('woff2'),
+    url('fonts/MicrogrammaMediumExtendedD/font.woff') format('woff');
 }
 @font-face {
-  font-family: "MicrogrammaBoldExtended(D)";
+  font-family: 'MicrogrammaBoldExtended(D)';
   src:
-    url("fonts/MicrogrammaBoldExtendedD/font.woff2") format("woff2"),
-    url("fonts/MicrogrammaBoldExtendedD/font.woff") format("woff");
+    url('fonts/MicrogrammaBoldExtendedD/font.woff2') format('woff2'),
+    url('fonts/MicrogrammaBoldExtendedD/font.woff') format('woff');
 }
